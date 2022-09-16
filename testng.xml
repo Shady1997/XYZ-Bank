@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<!-- to run test sequentially change thread count from 2 to 1 and enable 
+	firefox -->
+<suite name="Test XYZ-Bank Web Application" parallel="tests"
+	thread-count="1">
+	<listeners>
+		<listener class-name="reports.MyListener" />
+	</listeners>
+	<test name="Test Login to XYZ-Bank and Make Full Transaction">
+		<parameter name="browser" value="Chrome" />
+		<classes>
+			<class name="test_cases.TestCase001_CustomerLogin" />
+			<class name="test_cases.TestCase002_MakeDeposite" />
+			<class name="test_cases.TestCase003_MakeWithdraw" />
+			<class name="test_cases.TestCase004_CheckTransactionType" />
+		</classes>
+	</test>
+	<!--<test name="TestFirefox"> <parameter name="browser" value="Firefox" 
+		/> <classes> <class name="main.Start" /> </classes> </test> -->
+</suite>
