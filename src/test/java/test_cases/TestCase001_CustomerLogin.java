@@ -2,6 +2,8 @@ package test_cases;
 
 import java.awt.AWTException;
 
+import org.openqa.selenium.By;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import pages.PageBase;
@@ -17,6 +19,7 @@ public class TestCase001_CustomerLogin extends TestBase {
 		// take screenshot after successful login
 		PageBase.captureScreenshot(driver, "LoginPage");
 		// assert if login correctly
+		Assert.assertEquals(driver.findElement(By.cssSelector("div[class='borderM box padT20 ng-scope'] div:nth-child(1) strong:nth-child(1)")).getText().toString(), "Welcome Albus Dumbledore !!");
 //		PageBase.assertToObjectExistWithGetText(driver, " Welcome ");
 	}
 

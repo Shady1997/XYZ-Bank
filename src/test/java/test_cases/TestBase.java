@@ -56,7 +56,9 @@ public class TestBase {
 		if (browser.equalsIgnoreCase("Firefox")) {
 //			System.setProperty("webdriver.gecko.driver",
 //					System.getProperty("user.dir") + prop.getProperty("firefoxdriver"));
-//			driver = new FirefoxDriver();
+			// use webdrivermanager
+			WebDriverManager.firefoxdriver().setup();
+			driver = new FirefoxDriver();
 		} else if (browser.equalsIgnoreCase("Chrome")) {
 //			System.setProperty("webdriver.chrome.driver",
 //					System.getProperty("user.dir") + prop.getProperty("chromedriver"));
@@ -82,16 +84,12 @@ public class TestBase {
 		// take screenshot to login page
 		PageBase.captureScreenshot(driver, "HomePage");
 		// assert if application start correctly
-		PageBase.assertToObjectExistWithGetText(driver, "XYZ Bank");
+//		PageBase.assertToObjectExistWithGetText(driver, "XYZ Bank");
 	}
 
 	@AfterTest
 	public void tearDown() {
 		driver.quit();
-	}
-
-	public static void getScreenshotOnFailure() {
-		PageBase.captureScreenshot(driver, "fail" + java.time.LocalTime.now().toString());
 	}
 
 }

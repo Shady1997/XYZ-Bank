@@ -2,7 +2,7 @@
 <testng-results skipped="0" failed="0" ignored="6" total="14" passed="8">
   <reporter-output>
   </reporter-output>
-  <suite name="Test XYZ-Bank Web Application" duration-ms="16667" started-at="2022-10-28T22:41:36 EET" finished-at="2022-10-28T22:41:52 EET">
+  <suite name="Test XYZ-Bank Web Application" duration-ms="17775" started-at="2022-10-30T11:01:31 EET" finished-at="2022-10-30T11:01:49 EET">
     <groups>
       <group name="smoke">
         <method signature="TestBase.startApplication()[pri:1, instance:test_cases.TestCase001_CustomerLogin@1e4a7dd4]" name="startApplication" class="test_cases.TestBase"/>
@@ -15,19 +15,19 @@
         <method signature="TestCase004_CheckTransactionType.customerLogin()[pri:5, instance:test_cases.TestCase004_CheckTransactionType@50de0926]" name="customerLogin" class="test_cases.TestCase004_CheckTransactionType"/>
       </group> <!-- smoke -->
     </groups>
-    <test name="Test Login to XYZ-Bank and Make Full Transaction" duration-ms="16667" started-at="2022-10-28T22:41:36 EET" finished-at="2022-10-28T22:41:52 EET">
+    <test name="Test Login to XYZ-Bank and Make Full Transaction" duration-ms="17775" started-at="2022-10-30T11:01:31 EET" finished-at="2022-10-30T11:01:49 EET">
       <class name="test_cases.TestCase004_CheckTransactionType">
-        <test-method status="PASS" signature="startApplication()[pri:1, instance:test_cases.TestCase004_CheckTransactionType@50de0926]" name="startApplication" duration-ms="382" started-at="2022-10-28T22:41:43 EET" description="Start XYZ-Bank Web Application" finished-at="2022-10-28T22:41:44 EET">
+        <test-method status="PASS" signature="startApplication()[pri:1, instance:test_cases.TestCase004_CheckTransactionType@50de0926]" name="startApplication" duration-ms="478" started-at="2022-10-30T11:01:39 EET" description="Start XYZ-Bank Web Application" finished-at="2022-10-30T11:01:39 EET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startApplication -->
-        <test-method status="PASS" signature="customerLogin()[pri:5, instance:test_cases.TestCase004_CheckTransactionType@50de0926]" name="customerLogin" duration-ms="4151" started-at="2022-10-28T22:41:47 EET" description="Check Last Transaction Type" finished-at="2022-10-28T22:41:52 EET">
+        <test-method status="PASS" signature="customerLogin()[pri:5, instance:test_cases.TestCase004_CheckTransactionType@50de0926]" name="customerLogin" duration-ms="4162" started-at="2022-10-30T11:01:44 EET" description="Check Last Transaction Type" finished-at="2022-10-30T11:01:48 EET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- customerLogin -->
       </class> <!-- test_cases.TestCase004_CheckTransactionType -->
       <class name="test_cases.TestCase001_CustomerLogin">
-        <test-method status="PASS" signature="prepareClassProperties(java.lang.String)[pri:0, instance:test_cases.TestCase001_CustomerLogin@1e4a7dd4]" name="prepareClassProperties" is-config="true" duration-ms="4926" started-at="2022-10-28T22:41:36 EET" finished-at="2022-10-28T22:41:41 EET">
+        <test-method status="PASS" signature="prepareClassProperties(java.lang.String)[pri:0, instance:test_cases.TestCase001_CustomerLogin@1e4a7dd4]" name="prepareClassProperties" is-config="true" duration-ms="4453" started-at="2022-10-30T11:01:31 EET" finished-at="2022-10-30T11:01:36 EET">
           <params>
             <param index="0">
               <value>
@@ -38,35 +38,35 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- prepareClassProperties -->
-        <test-method status="PASS" signature="startApplication()[pri:1, instance:test_cases.TestCase001_CustomerLogin@1e4a7dd4]" name="startApplication" duration-ms="1693" started-at="2022-10-28T22:41:41 EET" description="Start XYZ-Bank Web Application" finished-at="2022-10-28T22:41:42 EET">
+        <test-method status="PASS" signature="startApplication()[pri:1, instance:test_cases.TestCase001_CustomerLogin@1e4a7dd4]" name="startApplication" duration-ms="2112" started-at="2022-10-30T11:01:36 EET" description="Start XYZ-Bank Web Application" finished-at="2022-10-30T11:01:38 EET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startApplication -->
-        <test-method status="PASS" signature="customerLogin()[pri:2, instance:test_cases.TestCase001_CustomerLogin@1e4a7dd4]" name="customerLogin" duration-ms="713" started-at="2022-10-28T22:41:44 EET" description="Customer Login" finished-at="2022-10-28T22:41:44 EET">
+        <test-method status="PASS" signature="customerLogin()[pri:2, instance:test_cases.TestCase001_CustomerLogin@1e4a7dd4]" name="customerLogin" duration-ms="1881" started-at="2022-10-30T11:01:39 EET" description="Customer Login" finished-at="2022-10-30T11:01:41 EET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- customerLogin -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:test_cases.TestCase001_CustomerLogin@1e4a7dd4]" name="tearDown" is-config="true" duration-ms="740" started-at="2022-10-28T22:41:52 EET" finished-at="2022-10-28T22:41:52 EET">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:test_cases.TestCase001_CustomerLogin@1e4a7dd4]" name="tearDown" is-config="true" duration-ms="767" started-at="2022-10-30T11:01:48 EET" finished-at="2022-10-30T11:01:49 EET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- test_cases.TestCase001_CustomerLogin -->
       <class name="test_cases.TestCase002_MakeDeposite">
-        <test-method status="PASS" signature="startApplication()[pri:1, instance:test_cases.TestCase002_MakeDeposite@1cab0bfb]" name="startApplication" duration-ms="689" started-at="2022-10-28T22:41:42 EET" description="Start XYZ-Bank Web Application" finished-at="2022-10-28T22:41:43 EET">
+        <test-method status="PASS" signature="startApplication()[pri:1, instance:test_cases.TestCase002_MakeDeposite@1cab0bfb]" name="startApplication" duration-ms="675" started-at="2022-10-30T11:01:38 EET" description="Start XYZ-Bank Web Application" finished-at="2022-10-30T11:01:38 EET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startApplication -->
-        <test-method status="PASS" signature="customerLogin()[pri:3, instance:test_cases.TestCase002_MakeDeposite@1cab0bfb]" name="customerLogin" duration-ms="707" started-at="2022-10-28T22:41:44 EET" description="Make New Deposite" finished-at="2022-10-28T22:41:45 EET">
+        <test-method status="PASS" signature="customerLogin()[pri:3, instance:test_cases.TestCase002_MakeDeposite@1cab0bfb]" name="customerLogin" duration-ms="536" started-at="2022-10-30T11:01:41 EET" description="Make New Deposite" finished-at="2022-10-30T11:01:42 EET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- customerLogin -->
       </class> <!-- test_cases.TestCase002_MakeDeposite -->
       <class name="test_cases.TestCase003_MakeWithdraw">
-        <test-method status="PASS" signature="startApplication()[pri:1, instance:test_cases.TestCase003_MakeWithdraw@5e955596]" name="startApplication" duration-ms="350" started-at="2022-10-28T22:41:43 EET" description="Start XYZ-Bank Web Application" finished-at="2022-10-28T22:41:43 EET">
+        <test-method status="PASS" signature="startApplication()[pri:1, instance:test_cases.TestCase003_MakeWithdraw@5e955596]" name="startApplication" duration-ms="420" started-at="2022-10-30T11:01:38 EET" description="Start XYZ-Bank Web Application" finished-at="2022-10-30T11:01:39 EET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startApplication -->
-        <test-method status="PASS" signature="customerLogin()[pri:4, instance:test_cases.TestCase003_MakeWithdraw@5e955596]" name="customerLogin" duration-ms="2267" started-at="2022-10-28T22:41:45 EET" description="Make New Withdraw" finished-at="2022-10-28T22:41:47 EET">
+        <test-method status="PASS" signature="customerLogin()[pri:4, instance:test_cases.TestCase003_MakeWithdraw@5e955596]" name="customerLogin" duration-ms="2249" started-at="2022-10-30T11:01:42 EET" description="Make New Withdraw" finished-at="2022-10-30T11:01:44 EET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- customerLogin -->
