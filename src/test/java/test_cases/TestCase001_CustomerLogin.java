@@ -2,6 +2,7 @@ package test_cases;
 
 import java.awt.AWTException;
 
+import com.relevantcodes.extentreports.LogStatus;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -20,7 +21,9 @@ public class TestCase001_CustomerLogin extends TestBase {
 		PageBase.captureScreenshot(driver, "LoginPage");
 		// assert if login correctly
 		Assert.assertEquals(driver.findElement(By.cssSelector("div[class='borderM box padT20 ng-scope'] div:nth-child(1) strong:nth-child(1)")).getText().toString(), "Welcome Albus Dumbledore !!");
-//		PageBase.assertToObjectExistWithGetText(driver, " Welcome ");
+		PageBase.assertToObjectExistWithGetText(driver, " Welcome ");
+		// extend report status
+		test.log(LogStatus.PASS, "Login Correctly to XYZ Bank");
 	}
 
 }

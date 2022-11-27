@@ -1,13 +1,16 @@
 package test_cases;
 
 import java.awt.AWTException;
-import java.io.FileInputStream;
+//import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Properties;
+//import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.ExtentTest;
+//import com.relevantcodes.extentreports.LogStatus;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -28,6 +31,10 @@ public class TestBase {
 	public static WebDriver driver;
 //	FileInputStream readProperty;
 //	public static Properties prop;
+
+	// extend report
+	static ExtentTest test;
+	static ExtentReports report;
 	public static ChromeOptions options;
 	JavascriptExecutor js;
 	HomePage loginPage;
@@ -43,8 +50,9 @@ public class TestBase {
 		options.addArguments("--start-maximized");
 		options.addArguments("--disable-web-security");
 		options.addArguments("--no-proxy-server");
+		options.addArguments("--ignore-certificate-errors");
 		// to run headless test
-		options.addArguments("--headless");
+//		options.addArguments("--headless");
 
 		Map<String, Object> prefs = new HashMap<String, Object>();
 		prefs.put("credentials_enable_service", false);
@@ -73,6 +81,9 @@ public class TestBase {
 		js = (JavascriptExecutor) driver;
 		// Set Driver wait
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		// define extend report
+		report = new ExtentReports(System.getProperty("user.dir")+"\\ExtentReportResults.html");
+		test = report.startTest("XYZ Project");
 	}
 
 	@Test(priority = 1, groups = "smoke", description = "Start XYZ-Bank Web Application")
@@ -84,11 +95,13 @@ public class TestBase {
 		// take screenshot to login page
 		PageBase.captureScreenshot(driver, "HomePage");
 		// assert if application start correctly
-//		PageBase.assertToObjectExistWithGetText(driver, "XYZ Bank");
+		PageBase.assertToObjectExistWithGetText(driver, "XYZ Bank");
 	}
 
 	@AfterTest
 	public void tearDown() {
+		report.endTest(test);
+		report.flush();
 		driver.quit();
 	}
 
