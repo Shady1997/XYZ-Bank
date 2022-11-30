@@ -1,8 +1,8 @@
 testNGDataProvider\TestNGDataProvider.class
-test_cases\TestBase.class
-test_cases\TestCase003_MakeWithdraw.class
 test_cases\TestCase004_CheckTransactionType.class
 reports\MyListener.class
 testNGListener\Listener.class
+test_cases\TestBase.class
+test_cases\TestCase003_MakeWithdraw.class
 test_cases\TestCase002_MakeDeposite.class
 test_cases\TestCase001_CustomerLogin.class

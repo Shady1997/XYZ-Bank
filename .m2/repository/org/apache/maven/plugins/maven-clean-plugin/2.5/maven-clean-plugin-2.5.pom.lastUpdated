@@ -1,0 +1,4 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Sat Oct 29 13:43:17 EET 2022
+@default-nexus-https\://mph-nexus-01.devops.in.idemia.com/nexus/content/repositories/pub-central/.lastUpdated=1667043797098
+https\://mph-nexus-01.devops.in.idemia.com/nexus/content/repositories/pub-central/.error=Could not transfer artifact org.apache.maven.plugins\:maven-clean-plugin\:pom\:2.5 from/to nexus (https\://mph-nexus-01.devops.in.idemia.com/nexus/content/repositories/pub-central)\: transfer failed for https\://mph-nexus-01.devops.in.idemia.com/nexus/content/repositories/pub-central/org/apache/maven/plugins/maven-clean-plugin/2.5/maven-clean-plugin-2.5.pom
