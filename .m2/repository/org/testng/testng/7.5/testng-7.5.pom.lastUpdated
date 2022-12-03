@@ -1,0 +1,5 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Sat Oct 29 13:31:42 EET 2022
+@default-nexus-https\://mph-nexus-01.devops.in.idemia.com/nexus/content/repositories/pub-central/.lastUpdated=1667043102664
+8de5c0a414117862cbfc11a60802590d675f2484@default-mph-https\://mph-nexus-01.devops.in.idemia.com/nexus/content/repositories/pub-central/.lastUpdated=1667043102463
+https\://mph-nexus-01.devops.in.idemia.com/nexus/content/repositories/pub-central/.error=Could not transfer artifact org.testng\:testng\:pom\:7.5 from/to nexus (https\://mph-nexus-01.devops.in.idemia.com/nexus/content/repositories/pub-central)\: transfer failed for https\://mph-nexus-01.devops.in.idemia.com/nexus/content/repositories/pub-central/org/testng/testng/7.5/testng-7.5.pom
