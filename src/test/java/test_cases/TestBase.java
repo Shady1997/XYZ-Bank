@@ -2,6 +2,8 @@ package test_cases;
 
 import java.awt.AWTException;
 //import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
@@ -12,6 +14,9 @@ import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 //import com.relevantcodes.extentreports.LogStatus;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -87,7 +92,7 @@ public class TestBase {
 	}
 
 	@Test(priority = 1, groups = "smoke", description = "Start XYZ-Bank Web Application")
-	public void startApplication() throws InterruptedException {
+	public void startApplication() throws InterruptedException, IOException, ParseException {
 		// Mazimize current window
 		driver.manage().window().maximize();
 		// navigate to website
@@ -96,6 +101,27 @@ public class TestBase {
 		PageBase.captureScreenshot(driver, "HomePage");
 		// assert if application start correctly
 		PageBase.assertToObjectExistWithGetText(driver, "XYZ Bank");
+
+//		// handle json data
+//		JSONParser jsonParser= new JSONParser();
+//		FileReader fileReader = new FileReader("src/Jsonfiles/employee.json");
+//         //Read Json file
+//		Object obj = jsonParser.parse(fileReader);
+//		JSONObject jsonObject = (JSONObject)obj;
+//		//Print JSON file
+//		System.out.println(jsonObject);
+//		for (int i =0;i<array.size();i++){
+//			JSONObject address = (JSONObject) array.get(i);
+//
+//			String street = (String) address.get("street");
+//			String city = (String) address.get("city");
+//			String state = (String) address.get("state");
+//
+//			System.out.println("STREET  "+street);
+//			System.out.println("CITY  "+city);
+//			System.out.println("STATE  "+state);
+//		}
+
 	}
 
 	@AfterTest
