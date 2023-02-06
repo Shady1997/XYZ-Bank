@@ -45,7 +45,7 @@ public class Listener implements ITestListener {
 		TakesScreenshot takesScreenshot = (TakesScreenshot) driver;
 		try {
 			FileHandler.copy(takesScreenshot.getScreenshotAs(OutputType.FILE), new File(System.getProperty("user.dir")
-					+ "\\src\\test\\resources\\Screenshots\\" + "fail" + java.time.LocalTime.now().toString() + ".png"));
+					+ "/src/test/resources/Screenshots/" + "fail" + java.time.LocalTime.now().toString() + ".png"));
 		} catch (WebDriverException e) {
 			e.printStackTrace();
 		} catch (IOException e) {

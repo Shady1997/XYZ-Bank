@@ -1,0 +1,12 @@
+2023-02-06 12:12:45  [io.github.bonigarcia.wdm.WebDriverManager] (main:) Using chromedriver 109.0.5414.74 (resolved driver for Chrome 109)
+2023-02-06 12:12:45  [io.github.bonigarcia.wdm.WebDriverManager] (main:) Exporting webdriver.chrome.driver as C:\Users\G525585\.cache\selenium\chromedriver\win32\109.0.5414.74\chromedriver.exe
+2023-02-06 12:12:56  [log4j.Logging] (main:) opening webiste
+2023-02-06 12:12:56  [log4j.Logging] (main:) entring weight
+2023-02-06 12:12:57  [log4j.Logging] (main:) selecting kilograms
+2023-02-06 12:12:57  [log4j.Logging] (main:) selecting height in feet
+2023-02-06 12:12:57  [log4j.Logging] (main:) selecting height in inchs
+2023-02-06 12:12:57  [log4j.Logging] (main:) Clicking on calculate
+2023-02-06 12:12:57  [log4j.Logging] (main:) Getting SIUnit value
+2023-02-06 12:12:57  [log4j.Logging] (main:) Getting USUnit value
+2023-02-06 12:12:58  [log4j.Logging] (main:) Getting UKUnit value
+2023-02-06 12:12:58  [log4j.Logging] (main:) Getting overall description

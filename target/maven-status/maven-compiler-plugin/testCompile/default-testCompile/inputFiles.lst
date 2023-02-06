@@ -4,6 +4,8 @@ C:\Users\G525585\eclipse-workspace\XYZ_Bank\src\test\java\test_cases\TestCase001
 C:\Users\G525585\eclipse-workspace\XYZ_Bank\src\test\java\test_cases\TestBase.java
 C:\Users\G525585\eclipse-workspace\XYZ_Bank\src\test\java\testNGDataProvider\TestNGDataProvider.java
 C:\Users\G525585\eclipse-workspace\XYZ_Bank\src\test\java\reports\MyListener.java
+C:\Users\G525585\eclipse-workspace\XYZ_Bank\src\test\java\log4j\Logging.java
 C:\Users\G525585\eclipse-workspace\XYZ_Bank\src\test\java\testNGListener\Listener.java
+C:\Users\G525585\eclipse-workspace\XYZ_Bank\src\test\java\javaFakerDataGenerator\FakerDataGenerator.java
+C:\Users\G525585\eclipse-workspace\XYZ_Bank\src\test\java\jsonDataProvider\TestJsonDataDriven.java
 C:\Users\G525585\eclipse-workspace\XYZ_Bank\src\test\java\test_cases\TestCase003_MakeWithdraw.java
-C:\Users\G525585\eclipse-workspace\XYZ_Bank\src\test\java\test_cases\TestJsonDataDriven.java

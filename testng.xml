@@ -5,6 +5,7 @@
 <suite name="Test XYZ-Bank Web Application" parallel="tests"
 	thread-count="1">
 	<listeners>
+		<listener class-name="testNGListener.Listener" />
 		<listener class-name="reports.MyListener" />
 	</listeners>
 	<test name="Test Login to XYZ-Bank and Make Full Transaction">

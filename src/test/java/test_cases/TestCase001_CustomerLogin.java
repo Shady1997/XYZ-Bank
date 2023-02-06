@@ -5,10 +5,12 @@ import java.awt.AWTException;
 import com.relevantcodes.extentreports.LogStatus;
 import org.openqa.selenium.By;
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import pages.PageBase;
 
+@Listeners({testNGListener.Listener.class,reports.MyListener.class})
 public class TestCase001_CustomerLogin extends TestBase {
 
 	pages.HomePage homePage;

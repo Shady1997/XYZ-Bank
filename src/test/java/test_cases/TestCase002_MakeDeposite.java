@@ -3,12 +3,14 @@ package test_cases;
 import com.relevantcodes.extentreports.LogStatus;
 import org.openqa.selenium.By;
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import pages.PageBase;
 import pages.UserPage;
 
 import java.awt.*;
 
+@Listeners({testNGListener.Listener.class,reports.MyListener.class})
 public class TestCase002_MakeDeposite extends TestBase{
 
     UserPage userPage;

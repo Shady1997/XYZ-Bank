@@ -22,14 +22,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Parameters;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 import pages.HomePage;
 import pages.PageBase;
 
+@Listeners({testNGListener.Listener.class,reports.MyListener.class})
 public class TestBase {
 
 	// define main properties
@@ -46,7 +44,7 @@ public class TestBase {
 
 	@Parameters("browser")
 	@BeforeTest
-	public void prepareClassProperties(String browser) throws IOException, AWTException {
+	public void prepareClassProperties(String browser){
 //		readProperty = new FileInputStream(
 //				System.getProperty("user.dir") + "\\src\\test\\resources\\properties\\generalProperties.properties");
 //		prop = new Properties();
