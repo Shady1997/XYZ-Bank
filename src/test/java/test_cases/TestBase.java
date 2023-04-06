@@ -1,9 +1,6 @@
 package test_cases;
 
-import java.awt.AWTException;
 //import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
@@ -14,9 +11,7 @@ import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 //import com.relevantcodes.extentreports.LogStatus;
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
-import org.json.simple.parser.ParseException;
+		import org.json.simple.parser.ParseException;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -44,7 +39,7 @@ public class TestBase {
 
 	@Parameters("browser")
 	@BeforeTest
-	public void prepareClassProperties(String browser){
+	public void setupDriver(String browser){
 //		readProperty = new FileInputStream(
 //				System.getProperty("user.dir") + "\\src\\test\\resources\\properties\\generalProperties.properties");
 //		prop = new Properties();

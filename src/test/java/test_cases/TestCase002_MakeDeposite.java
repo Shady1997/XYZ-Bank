@@ -10,7 +10,6 @@ import pages.UserPage;
 
 import java.awt.*;
 
-@Listeners({testNGListener.Listener.class,reports.MyListener.class})
 public class TestCase002_MakeDeposite extends TestBase{
 
     UserPage userPage;

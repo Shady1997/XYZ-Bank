@@ -1,10 +1,10 @@
+test_cases\TestCase002_MakeDeposite.class
+test_cases\TestCase001_CustomerLogin.class
+testNGDataProvider\TestNGDataProvider.class
 test_cases\TestCase004_CheckTransactionType.class
 reports\MyListener.class
 log4j\Logging.class
 test_cases\TestCase003_MakeWithdraw.class
-test_cases\TestCase002_MakeDeposite.class
-test_cases\TestCase001_CustomerLogin.class
-testNGDataProvider\TestNGDataProvider.class
 testNGListener\Listener.class
 javaFakerDataGenerator\FakerDataGenerator.class
 test_cases\TestBase.class

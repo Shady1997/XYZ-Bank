@@ -9,7 +9,6 @@ import pages.PageBase;
 import pages.UserPage;
 
 import java.awt.*;
-@Listeners({testNGListener.Listener.class,reports.MyListener.class})
 public class TestCase004_CheckTransactionType extends TestBase{
 
     UserPage userPage;

@@ -124,7 +124,7 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Test_XYZ_Bank_Web_Application" title="test_cases.TestCase004_CheckTransactionType" class="method navigator-link" hash-for-method="startApplication">startApplication</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Test_XYZ_Bank_Web_Application" title="test_cases.TestCase001_CustomerLogin" class="method navigator-link" hash-for-method="startApplication">startApplication</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -139,7 +139,7 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Test_XYZ_Bank_Web_Application" title="test_cases.TestCase001_CustomerLogin" class="method navigator-link" hash-for-method="startApplication">startApplication</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Test_XYZ_Bank_Web_Application" title="test_cases.TestCase004_CheckTransactionType" class="method navigator-link" hash-for-method="startApplication">startApplication</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Test_XYZ_Bank_Web_Application -->
@@ -183,16 +183,16 @@
           <div class="suite-Test_XYZ_Bank_Web_Application-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">test_cases.TestCase002_MakeDeposite</span>
+              <span class="class-name">test_cases.TestCase003_MakeWithdraw</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="makeNewDeposite">
-                  </a> <!-- makeNewDeposite -->
-                  <span class="method-name">makeNewDeposite</span>
+                  <a name="makeNewWithdraw">
+                  </a> <!-- makeNewWithdraw -->
+                  <span class="method-name">makeNewWithdraw</span>
                   <em>
-(Make New Deposite)                  </em>
+(Make New Withdraw)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -235,16 +235,16 @@
           <div class="suite-Test_XYZ_Bank_Web_Application-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">test_cases.TestCase003_MakeWithdraw</span>
+              <span class="class-name">test_cases.TestCase002_MakeDeposite</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="makeNewWithdraw">
-                  </a> <!-- makeNewWithdraw -->
-                  <span class="method-name">makeNewWithdraw</span>
+                  <a name="makeNewDeposite">
+                  </a> <!-- makeNewDeposite -->
+                  <span class="method-name">makeNewDeposite</span>
                   <em>
-(Make New Withdraw)                  </em>
+(Make New Deposite)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -267,12 +267,12 @@
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite thread-count=&quot;1&quot; parallel=&quot;tests&quot; name=&quot;Test XYZ-Bank Web Application&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
+&lt;suite thread-count=&quot;2&quot; parallel=&quot;tests&quot; name=&quot;Test XYZ-Bank Web Application&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;listeners&gt;
     &lt;listener class-name=&quot;testNGListener.Listener&quot;/&gt;
     &lt;listener class-name=&quot;reports.MyListener&quot;/&gt;
   &lt;/listeners&gt;
-  &lt;test thread-count=&quot;1&quot; parallel=&quot;tests&quot; name=&quot;Test Login to XYZ-Bank and Make Full Transaction&quot;&gt;
+  &lt;test thread-count=&quot;2&quot; parallel=&quot;tests&quot; name=&quot;Test Login to XYZ-Bank and Make Full Transaction&quot;&gt;
     &lt;parameter name=&quot;browser&quot; value=&quot;Chrome&quot;/&gt;
     &lt;classes&gt;
       &lt;class name=&quot;test_cases.TestCase001_CustomerLogin&quot;/&gt;
@@ -346,40 +346,40 @@ data.addRows(8);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'checkTransactionType')
 data.setCell(0, 2, 'test_cases.TestCase004_CheckTransactionType')
-data.setCell(0, 3, 4454);
+data.setCell(0, 3, 4488);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'makeNewWithdraw')
 data.setCell(1, 2, 'test_cases.TestCase003_MakeWithdraw')
-data.setCell(1, 3, 2737);
+data.setCell(1, 3, 2765);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'startApplication')
-data.setCell(2, 2, 'test_cases.TestCase001_CustomerLogin')
-data.setCell(2, 3, 2402);
+data.setCell(2, 2, 'test_cases.TestCase002_MakeDeposite')
+data.setCell(2, 3, 1992);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'customerLogin')
 data.setCell(3, 2, 'test_cases.TestCase001_CustomerLogin')
-data.setCell(3, 3, 1715);
+data.setCell(3, 3, 1981);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'makeNewDeposite')
-data.setCell(4, 2, 'test_cases.TestCase002_MakeDeposite')
-data.setCell(4, 3, 1405);
+data.setCell(4, 1, 'startApplication')
+data.setCell(4, 2, 'test_cases.TestCase001_CustomerLogin')
+data.setCell(4, 3, 1854);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'startApplication')
-data.setCell(5, 2, 'test_cases.TestCase003_MakeWithdraw')
-data.setCell(5, 3, 797);
+data.setCell(5, 1, 'makeNewDeposite')
+data.setCell(5, 2, 'test_cases.TestCase002_MakeDeposite')
+data.setCell(5, 3, 1103);
 data.setCell(6, 0, 6)
 data.setCell(6, 1, 'startApplication')
-data.setCell(6, 2, 'test_cases.TestCase002_MakeDeposite')
-data.setCell(6, 3, 793);
+data.setCell(6, 2, 'test_cases.TestCase003_MakeWithdraw')
+data.setCell(6, 3, 664);
 data.setCell(7, 0, 7)
 data.setCell(7, 1, 'startApplication')
 data.setCell(7, 2, 'test_cases.TestCase004_CheckTransactionType')
-data.setCell(7, 3, 698);
+data.setCell(7, 3, 658);
 window.suiteTableData['Test_XYZ_Bank_Web_Application']= { tableData: data, tableDiv: 'times-div-Test_XYZ_Bank_Web_Application'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 29 seconds</span>
+              <span class="suite-total-time">Total running time: 28 seconds</span>
               <div id="times-div-Test_XYZ_Bank_Web_Application">
               </div> <!-- times-div-Test_XYZ_Bank_Web_Application -->
             </div> <!-- times-div -->
@@ -398,29 +398,29 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
-              <span class="ignored-class-name">test_cases.TestCase002_MakeDeposite</span>
+              <span class="ignored-class-name">test_cases.TestCase003_MakeWithdraw</span>
               <div class="ignored-methods-div">
                 <span class="ignored-method-name">tearDown</span>
                 <br/>
-                <span class="ignored-method-name">prepareClassProperties</span>
+                <span class="ignored-method-name">setupDriver</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
             <div class="ignored-class-div">
               <span class="ignored-class-name">test_cases.TestCase004_CheckTransactionType</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">prepareClassProperties</span>
-                <br/>
                 <span class="ignored-method-name">tearDown</span>
+                <br/>
+                <span class="ignored-method-name">setupDriver</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
             <div class="ignored-class-div">
-              <span class="ignored-class-name">test_cases.TestCase003_MakeWithdraw</span>
+              <span class="ignored-class-name">test_cases.TestCase002_MakeDeposite</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">prepareClassProperties</span>
-                <br/>
                 <span class="ignored-method-name">tearDown</span>
+                <br/>
+                <span class="ignored-method-name">setupDriver</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -434,68 +434,68 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">test_cases.TestCase001_CustomerLogin</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
-                <span class="method-name">prepareClassProperties(Chrome)</span>
+                <span class="method-name">setupDriver(Chrome)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
                 <span class="method-name">startApplication</span>
-                <span class="method-start">12672 ms</span>
+                <span class="method-start">10254 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">test_cases.TestCase002_MakeDeposite</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">startApplication</span>
-                <span class="method-start">15307 ms</span>
+                <span class="method-start">12406 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">test_cases.TestCase003_MakeWithdraw</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">startApplication</span>
-                <span class="method-start">16108 ms</span>
+                <span class="method-start">14405 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">test_cases.TestCase004_CheckTransactionType</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">startApplication</span>
-                <span class="method-start">16910 ms</span>
+                <span class="method-start">15076 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">test_cases.TestCase001_CustomerLogin</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">customerLogin</span>
-                <span class="method-start">17613 ms</span>
+                <span class="method-start">15740 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">test_cases.TestCase002_MakeDeposite</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">makeNewDeposite</span>
-                <span class="method-start">19335 ms</span>
+                <span class="method-start">17727 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">test_cases.TestCase003_MakeWithdraw</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">makeNewWithdraw</span>
-                <span class="method-start">20745 ms</span>
+                <span class="method-start">18837 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">test_cases.TestCase004_CheckTransactionType</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">checkTransactionType</span>
-                <span class="method-start">23486 ms</span>
+                <span class="method-start">21608 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">test_cases.TestCase001_CustomerLogin</div> <!-- chronological-class-name -->
               <div class="configuration-test after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">27946 ms</span>
+                <span class="method-start">26102 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

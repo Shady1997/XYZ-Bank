@@ -1,4 +1,11 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 45.944 s - in TestSuite
+Tests run: 10, Failures: 1, Errors: 0, Skipped: 9, Time elapsed: 28.369 s <<< FAILURE! - in TestSuite
+test_cases.TestCase001_CustomerLogin.setupDriver[Chrome](0)  Time elapsed: 27.394 s  <<< FAILURE!
+org.openqa.selenium.remote.http.ConnectionFailedException: 
+Unable to establish websocket connection to http://localhost:57964/devtools/browser/7f18dded-edc0-44ca-b620-4dc4d0a8831c
+Build info: version: '4.4.0', revision: 'e5c75ed026a'
+System info: host: 'EGCA1-0091', ip: '192.168.1.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
+Driver info: driver.version: ChromeDriver
+

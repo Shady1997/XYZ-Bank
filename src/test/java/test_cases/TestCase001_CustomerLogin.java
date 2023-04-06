@@ -10,7 +10,6 @@ import org.testng.annotations.Test;
 
 import pages.PageBase;
 
-@Listeners({testNGListener.Listener.class,reports.MyListener.class})
 public class TestCase001_CustomerLogin extends TestBase {
 
 	pages.HomePage homePage;

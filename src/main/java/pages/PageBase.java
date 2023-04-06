@@ -140,7 +140,7 @@ public class PageBase {
 	}
 
 	// Execute javascript script to
-	public static void executeavascriptScript(String jsCommand, WebDriver driver) {
+	public static void executeJavaScript(String jsCommand, WebDriver driver) {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript(jsCommand);
 	}

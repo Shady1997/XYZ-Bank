@@ -9,7 +9,6 @@ import pages.PageBase;
 import pages.UserPage;
 
 import java.awt.*;
-@Listeners({testNGListener.Listener.class,reports.MyListener.class})
 public class TestCase003_MakeWithdraw extends TestBase{
     UserPage userPage;
 
