@@ -1,7 +1,14 @@
 package pages;
 
-import java.awt.AWTException;
-import java.awt.Robot;
+import database.DatabaseConnection;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.io.FileHandler;
+import org.testng.Assert;
+
+import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.io.File;
 import java.io.IOException;
@@ -9,20 +16,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.text.DecimalFormat;
 import java.util.Random;
-
-import org.apache.poi.xssf.usermodel.XSSFSheet;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebDriverException;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.io.FileHandler;
-import org.testng.Assert;
-
-import database.DatabaseConnection;
 
 public class PageBase {
 
@@ -180,5 +173,32 @@ public class PageBase {
 			e.printStackTrace();
 		}
 		return cellData;
+	}
+	// Read Excel Sheet
+	public static String[][] readExcelData(String SheetName) {
+		XSSFWorkbook workBook;
+		XSSFSheet sheet;
+		String projectPath = System.getProperty("user.dir");
+		String[][] excelData=null;
+		try {
+			workBook = new XSSFWorkbook(projectPath + "\\src\\test\\resources\\data_driven\\data.xlsx");
+			sheet = workBook.getSheet(SheetName);
+			int numberOfRows=sheet.getPhysicalNumberOfRows();
+			int numberOfColumns=sheet.getRow(0).getLastCellNum();
+
+			excelData=new String[numberOfRows-1][numberOfColumns-1];
+			for (int i=1;i<numberOfRows;i++)
+			{
+				for (int j=0;j<numberOfColumns;j++)
+				{
+					excelData[i-1][j]=sheet.getRow(i).getCell(j).getStringCellValue();
+				}
+			}
+		} catch (IOException e) {
+			System.out.println(e.getMessage());
+			System.out.println(e.getCause());
+			e.printStackTrace();
+		}
+		return excelData;
 	}
 }

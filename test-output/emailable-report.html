@@ -8,18 +8,19 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="8">Test XYZ-Bank Web Application</th></tr>
-<tr><td><a href="#t0">Test Login to XYZ-Bank and Make Full Transaction</a></td><td class="num">8</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">28,368</td><td></td><td></td></tr>
+<tr><th colspan="8">Default Suite</th></tr>
+<tr><td><a href="#t0">XYZ_Bank</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">4,396</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Test XYZ-Bank Web Application</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test Login to XYZ-Bank and Make Full Transaction &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">test_cases.TestCase001_CustomerLogin</td><td><a href="#m0">customerLogin</a></td><td rowspan="1">1676244140052</td><td rowspan="1">1981</td></tr><tr class="passedeven"><td><a href="#m1">startApplication</a></td><td rowspan="1">1676244134566</td><td rowspan="1">1854</td></tr><tr class="passedodd"><td rowspan="2">test_cases.TestCase002_MakeDeposite</td><td><a href="#m2">makeNewDeposite</a></td><td rowspan="1">1676244142039</td><td rowspan="1">1103</td></tr><tr class="passedodd"><td><a href="#m3">startApplication</a></td><td rowspan="1">1676244136718</td><td rowspan="1">1992</td></tr><tr class="passedeven"><td rowspan="2">test_cases.TestCase003_MakeWithdraw</td><td><a href="#m4">makeNewWithdraw</a></td><td rowspan="1">1676244143149</td><td rowspan="1">2765</td></tr><tr class="passedeven"><td><a href="#m5">startApplication</a></td><td rowspan="1">1676244138717</td><td rowspan="1">664</td></tr><tr class="passedodd"><td rowspan="2">test_cases.TestCase004_CheckTransactionType</td><td><a href="#m6">checkTransactionType</a></td><td rowspan="1">1676244145920</td><td rowspan="1">4488</td></tr><tr class="passedodd"><td><a href="#m7">startApplication</a></td><td rowspan="1">1676244139388</td><td rowspan="1">658</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">XYZ_Bank &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">testNGDataProvider.TestNGDataProvider</td><td><a href="#m0">test3</a></td><td rowspan="1">1687726634172</td><td rowspan="1">0</td></tr></tbody>
 </table>
-<h2>Test Login to XYZ-Bank and Make Full Transaction</h2><h3 id="m0">test_cases.TestCase001_CustomerLogin#customerLogin</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">test_cases.TestCase001_CustomerLogin#startApplication</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">test_cases.TestCase002_MakeDeposite#makeNewDeposite</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">test_cases.TestCase002_MakeDeposite#startApplication</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">test_cases.TestCase003_MakeWithdraw#makeNewWithdraw</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m5">test_cases.TestCase003_MakeWithdraw#startApplication</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m6">test_cases.TestCase004_CheckTransactionType#checkTransactionType</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m7">test_cases.TestCase004_CheckTransactionType#startApplication</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>XYZ_Bank</h2><h3 id="m0">testNGDataProvider.TestNGDataProvider#test3</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.RuntimeException: java.lang.ArrayIndexOutOfBoundsException: Index 1 out of bounds for length 1
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+Caused by: java.lang.ArrayIndexOutOfBoundsException: Index 1 out of bounds for length 1
+	at pages.PageBase.readExcelData(PageBase.java:194)
+	at testNGDataProvider.TestNGDataProvider.getData3(TestNGDataProvider.java:24)
+	... 24 more
+... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

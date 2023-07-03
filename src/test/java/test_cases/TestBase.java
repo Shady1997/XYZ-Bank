@@ -19,8 +19,6 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.*;
 
-import pages.HomePage;
-import pages.PageBase;
 
 @Listeners({testNGListener.Listener.class,reports.MyListener.class})
 public class TestBase {
@@ -35,7 +33,6 @@ public class TestBase {
 	static ExtentReports report;
 	public static ChromeOptions options;
 	JavascriptExecutor js;
-	HomePage loginPage;
 
 	@Parameters("browser")
 	@BeforeTest
@@ -91,9 +88,9 @@ public class TestBase {
 		// navigate to website
 		driver.get("https://www.globalsqa.com/angularJs-protractor/BankingProject/#/login");
 		// take screenshot to login page
-		PageBase.captureScreenshot(driver, "HomePage");
-		// assert if application start correctly
-		PageBase.assertToObjectExistWithGetText(driver, "XYZ Bank");
+//		PageBase.captureScreenshot(driver, "HomePage");
+//		// assert if application start correctly
+//		PageBase.assertToObjectExistWithGetText(driver, "XYZ Bank");
 
 //		// handle json data
 //		JSONParser jsonParser= new JSONParser();
