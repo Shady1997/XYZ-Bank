@@ -181,12 +181,12 @@ public class PageBase {
 		String projectPath = System.getProperty("user.dir");
 		String[][] excelData=null;
 		try {
-			workBook = new XSSFWorkbook(projectPath + "\\src\\test\\resources\\data_driven\\data.xlsx");
+			workBook = new XSSFWorkbook(projectPath + "/src/test/resources/data_driven/data.xlsx");
 			sheet = workBook.getSheet(SheetName);
 			int numberOfRows=sheet.getPhysicalNumberOfRows();
 			int numberOfColumns=sheet.getRow(0).getLastCellNum();
 
-			excelData=new String[numberOfRows-1][numberOfColumns-1];
+			excelData=new String[numberOfRows-1][numberOfColumns];
 			for (int i=1;i<numberOfRows;i++)
 			{
 				for (int j=0;j<numberOfColumns;j++)
