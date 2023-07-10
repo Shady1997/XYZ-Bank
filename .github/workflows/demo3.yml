@@ -21,8 +21,6 @@ jobs:
       - name: "Build with Maven"
         run: mvn clean verify
         
-      - name: Update dependency graph
-        uses: Shady1997/github-pages-deploy-action@4.1.5
       - name: Deploy report page to github page
         uses: Shady1997/github-pages-deploy-action@4.1.5
         with:
