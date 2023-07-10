@@ -27,7 +27,7 @@ jobs:
       - name: Deploy report page to github page
         uses: Shady1997/XYZ-Bank@push
         with:
-           branch: master
-           folder: ./temp_report
-           #github_token: ${{secrets.GITHUB_TOKEN}}
-           #publish_dir: ./temp_report
+           #branch: master
+           #folder: ./temp_report
+           github_token: ${{secrets.GITHUB_TOKEN}}
+           publish_dir: ./temp_report
