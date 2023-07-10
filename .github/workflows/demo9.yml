@@ -21,8 +21,8 @@ jobs:
       - name: "Build with Maven"
         run: mvn clean verify
         
-      - name: Update dependency graph
-        uses: Shady1997/XYZ-Bank@push
+     # - name: Update dependency graph
+      #  uses: Shady1997/XYZ-Bank@push
         
       - name: Deploy report page to github page
         uses: Shady1997/XYZ-Bank@push
