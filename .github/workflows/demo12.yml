@@ -19,7 +19,8 @@ jobs:
           distribution: "temurin"
           java-version: 11
           cache: "maven"
-          
+
+      #- uses: browser-actions/setup-chrome@115.0.5790.75
       - uses: browser-actions/setup-chrome@latest
       - run: chrome --version
       
