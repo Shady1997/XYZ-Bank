@@ -47,7 +47,7 @@ public class TestBase {
 		options.addArguments("--no-proxy-server");
 		options.addArguments("--ignore-certificate-errors");
 		// to run headless test
-//		options.addArguments("--headless");
+		options.addArguments("--headless");
 
 		Map<String, Object> prefs = new HashMap<String, Object>();
 		prefs.put("credentials_enable_service", false);
