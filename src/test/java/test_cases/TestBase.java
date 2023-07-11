@@ -41,11 +41,13 @@ public class TestBase {
 //				System.getProperty("user.dir") + "\\src\\test\\resources\\properties\\generalProperties.properties");
 //		prop = new Properties();
 //		prop.load(readProperty);
+		System.setProperty("webdriver.http.factory", "jdk-http-client");
 		options = new ChromeOptions();
 		options.addArguments("--start-maximized");
 		options.addArguments("--disable-web-security");
 		options.addArguments("--no-proxy-server");
 		options.addArguments("--ignore-certificate-errors");
+		options.addArguments("--remote-allow-origins=*");
 		// to run headless test
 		options.addArguments("--headless");
 
