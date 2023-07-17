@@ -52,13 +52,13 @@ jobs:
           allure_history: allure-history
           keep_reports: 20
 
-      - name: Deploy report to Github Pages
-        if: always()
-        uses: Shady1997/XYZ-Bank/ExtentReportResults.html@push
-        env:
-         PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-         PUBLISH_BRANCH: master
-        # PUBLISH_DIR: allure-history
+#       - name: Deploy report to Github Pages
+#         if: always()
+#         uses: Shady1997/XYZ-Bank/ExtentReportResults.html@push
+#         env:
+#          PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#          PUBLISH_BRANCH: master
+#         # PUBLISH_DIR: allure-history
 
 
 
