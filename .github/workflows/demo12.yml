@@ -54,11 +54,11 @@ jobs:
 
       - name: Deploy report to Github Pages
         if: always()
-        uses: Shady1997/XYZ-Bank@push
+        uses: Shady1997/XYZ-Bank/ExtentReportResults.html@push
         env:
          PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
          PUBLISH_BRANCH: master
-         PUBLISH_DIR: allure-history
+        # PUBLISH_DIR: allure-history
 
 
 
