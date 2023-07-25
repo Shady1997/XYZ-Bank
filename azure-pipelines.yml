@@ -1,0 +1,91 @@
+name: Maven Build
+
+trigger:
+  branches:
+    include:
+      - master
+
+jobs:
+  - job: Build
+    displayName: "Maven Build"
+    pool:
+      vmImage: 'ubuntu-latest'
+    steps:
+      - checkout: self
+        fetchDepth: 2
+
+      - task: UseJavaVersion@1
+        displayName: "Set up JDK"
+        inputs:
+          version: '11'
+          architecture: 'x64'
+
+      - task: Cache@2
+        inputs:
+          key: 'maven | "$(Agent.OS)" | **/pom.xml'
+          restoreKeys: 'maven | "$(Agent.OS)"'
+          path: '$(Pipeline.Workspace)/.m2'
+          cacheHitVar: MAVEN_RESTORED
+
+      - script: 'echo "Cache restored: $MAVEN_RESTORED"'
+        displayName: 'Check cache status'
+
+      - script: |
+          sudo apt-get update
+          sudo apt-get install -y google-chrome-stable
+          google-chrome --version
+        displayName: 'Install Chrome and Check Version'
+
+      - script: 'mvn -B clean test'
+        displayName: "Build with Maven"
+
+      - task: PublishBuildArtifacts@1
+        displayName: "Publish Allure results"
+        inputs:
+          PathtoPublish: 'allure-results'
+          ArtifactName: 'allure-results'
+          publishLocation: 'Container'
+
+      - checkout: self
+        path: 'master'
+        persistCredentials: false
+
+      - script: 'echo "Allure history fetched from master branch"'
+        displayName: 'Get Allure history'
+
+      - script: 'npm install -g allure-commandline'
+        displayName: 'Install Allure commandline'
+
+      - script: 'allure generate --clean --report-dir allure-report --history-dir master/allure-results'
+        displayName: 'Generate Allure report with history'
+
+      - task: PublishBuildArtifacts@1
+        displayName: "Publish Allure report"
+        inputs:
+          PathtoPublish: 'allure-report'
+          ArtifactName: 'allure-report'
+          publishLocation: 'Container'
+
+
+# # Maven
+# # Build your Java project and run tests with Apache Maven.
+# # Add steps that analyze code, save build artifacts, deploy, and more:
+# # https://docs.microsoft.com/azure/devops/pipelines/languages/java
+
+# trigger:
+# - master
+
+# pool:
+#   vmImage: ubuntu-latest
+
+# steps:
+# - task: Maven@3
+#   inputs:
+#     mavenPomFile: 'pom.xml'
+#     mavenOptions: '-Xmx3072m'
+#     javaHomeOption: 'JDKVersion'
+#     jdkVersionOption: '1.8'
+#     jdkArchitectureOption: 'x64'
+#     publishJUnitResults: true
+#     testResultsFiles: '**/surefire-reports/TEST-*.xml'
+#     goals: 'package'
