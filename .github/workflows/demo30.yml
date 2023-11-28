@@ -20,8 +20,8 @@ jobs:
           java-version: 11
           cache: "maven"
 
-      - uses: browser-actions/setup-chrome@114.0.5735.340
-      #- uses: browser-actions/setup-chrome@latest
+      #- uses: browser-actions/setup-chrome@114.0.5735.340
+      - uses: browser-actions/setup-chrome@latest
       - run: chrome --version
       
       - name: "Build with Maven"
