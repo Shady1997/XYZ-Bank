@@ -79,7 +79,7 @@ public class TestBase {
 		// Set Driver wait
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		// define extend report
-		report = new ExtentReports(System.getProperty("user.dir")+"\\ExtentReportResults.html");
+		report = new ExtentReports(System.getProperty("user.dir")+"/index.html");
 		test = report.startTest("XYZ Project");
 	}
 
