@@ -49,7 +49,7 @@ public class TestBase {
 		options.addArguments("--ignore-certificate-errors");
 		options.addArguments("--remote-allow-origins=*");
 		// to run headless test
-		options.addArguments("--headless");
+//		options.addArguments("--headless");
 
 		Map<String, Object> prefs = new HashMap<String, Object>();
 		prefs.put("credentials_enable_service", false);

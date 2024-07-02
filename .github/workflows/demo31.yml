@@ -1,0 +1,91 @@
+name: Selenium Tests with Firefox
+
+on:
+  push:
+    branches:
+      - master  # Trigger on push to the master branch
+  pull_request:
+    branches:
+      - master  # Trigger on pull requests targeting the master branch
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up JDK and Maven
+        uses: actions/setup-java@v2
+        with:
+          java-version: '17'
+          distribution: 'adopt'
+          architecture: 'x64'
+          maven-version: '3.1.0'  # Specify the Maven version if needed
+
+      - name: Install xmlstarlet
+        run: sudo apt-get install -y xmlstarlet
+
+      - name: Pull Selenium Docker image
+        run: docker pull selenium/standalone-firefox:latest
+
+      - name: Verify Docker image
+        run: docker run --rm selenium/standalone-firefox:latest firefox --version
+
+      - name: Build and Test with Maven
+        run: mvn clean verify  # Adjust this command based on your Maven goals
+
+      - name: Display Surefire XML report
+        if: always()
+        run: |
+          echo "Contents of Surefire XML report (testng-results.xml):"
+          cat target/surefire-reports/testng-results.xml || echo "Surefire XML report not found."
+
+      - name: Extract test results
+        id: extract_results
+        run: |
+          total_tests=$(xmlstarlet sel -t -v "/testng-results/@total" target/surefire-reports/testng-results.xml)
+          failed_tests=$(xmlstarlet sel -t -v "/testng-results/@failed" target/surefire-reports/testng-results.xml)
+          skipped_tests=$(xmlstarlet sel -t -v "/testng-results/@skipped" target/surefire-reports/testng-results.xml)
+          passed_tests=$(xmlstarlet sel -t -v "/testng-results/@passed" target/surefire-reports/testng-results.xml)
+          echo "::set-output name=passed::$passed_tests"
+          echo "::set-output name=failed::$failed_tests"
+          echo "::set-output name=skipped::$skipped_tests"
+          echo "::set-output name=total::$total_tests"
+
+      - name: Display test results summary
+        if: always()
+        run: |
+          echo "Total test cases = ${{ steps.extract_results.outputs.total }}"
+          echo "Passed test cases = ${{ steps.extract_results.outputs.passed }}"
+          echo "Failed test cases = ${{ steps.extract_results.outputs.failed }}"
+
+      - name: Generate Markdown table
+        id: generate_markdown_table
+        run: |
+          echo "### Test Results:"
+          echo "### Passed Test Cases:"
+          xmlstarlet sel -t -m "//test-method[@status='PASS' and not(@name=preceding::test-method[@status='PASS']/@name)]" -v "@name" -n target/surefire-reports/testng-results.xml
+          echo "------------------------------"
+          echo "### Failed Test Cases:"
+          failed_tests=$(xmlstarlet sel -t -v "count(//test-method[@status='FAIL'])" target/surefire-reports/testng-results.xml)
+          if [ "$failed_tests" -gt 0 ]; then
+            xmlstarlet sel -t -m "//test-method[@status='FAIL' and not(@name=preceding::test-method[@status='FAIL']/@name)]" -v "@name" -n target/surefire-reports/testng-results.xml
+          else
+            echo "No failed test cases."
+          fi
+
+      - name: Upload Surefire XML report as artifact
+        if: success()
+        uses: actions/upload-artifact@v2
+        with:
+          name: surefire-reports
+          path: target/surefire-reports
+
+      - name: Upload Markdown table as artifact
+        if: success()
+        uses: actions/upload-artifact@v2
+        with:
+          name: test-results
+          path: markdown_table.md  # Adjust the path if necessary
