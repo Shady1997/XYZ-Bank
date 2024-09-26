@@ -55,19 +55,20 @@ jobs:
 
       # Step 7: Commit and push HTML report (if reports are generated in HTML)
       - name: Commit and push HTML report
-       run: |
-        git config --global user.name "Shady1997"
-        git config --global user.email "shadyahmed9719@gmail.com"
-        git add .
-        
-        # Check for untracked files
-        if [[ -n $(git status --porcelain) ]]; then
+        run: |
+          git config --global user.name "Shady1997"
+          git config --global user.email "shadyahmed9719@gmail.com"
+          git add .
+          git commit -m "Update Selenium test report"
+          
+          # Check for untracked files
+          if [[ -n $(git status --porcelain) ]]; then
           echo "Untracked files detected. Attempting to stash them."
           git stash --include-untracked
-        fi
-        
-        git pull --rebase origin master
-        git push origin master
+          fi
+      
+          git pull --rebase origin master
+          git push origin master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
