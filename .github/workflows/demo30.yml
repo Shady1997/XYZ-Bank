@@ -21,45 +21,39 @@ jobs:
           fetch-depth: 0  # Fetch all history to avoid shallow clone issues
           submodules: true  # If using submodules, fetch them
 
-      # Step 2: Set up JDK
-      - name: Set up JDK
+      # Step 2: Set up JDK and Maven
+      - name: Set up JDK and Maven
         uses: actions/setup-java@v3
         with:
           java-version: '11'  # Use the appropriate JDK version for your project
           distribution: 'temurin'
 
-      # Step 3: Set up Maven
-      - name: Set up Maven
-        uses: actions/setup-java@v3
-        with:
-          distribution: 'maven'
-
-      # Step 4: Install Browser Dependencies (optional, adjust based on the browser you want)
+      # Step 3: Install Browser Dependencies (optional, adjust based on the browser you want)
       - name: Install Browser Dependencies
         run: |
           sudo apt-get update
           sudo apt-get install -y libgtk-3-0 libgbm-dev google-chrome-stable
 
-      # Step 5: Show Current Directory and List Files
+      # Step 4: Show Current Directory and List Files
       - name: Show Current Directory and Files
         run: |
           pwd     # Show the current working directory
           ls -la  # List all files to check for missing ones
 
-      # Step 6: Build Maven Project and Run Selenium Tests
+      # Step 5: Build Maven Project and Run Selenium Tests
       - name: Build and Test with Maven
         run: |
           mvn clean install    # Clean and install the project
           mvn test             # Run tests
 
-      # Step 7: Upload Test Results (if generated)
+      # Step 6: Upload Test Results (if generated)
       - name: Upload Test Results
         uses: actions/upload-artifact@v3   # Updated to v3
         with:
           name: test-results
           path: target/surefire-reports  # Change the path if your reports are generated elsewhere
 
-      # Step 8: Commit and push HTML report (if reports are generated in HTML)
+      # Step 7: Commit and push HTML report (if reports are generated in HTML)
       - name: Commit and push HTML report
         run: |
           git config --global user.name "Shady1997"
@@ -70,6 +64,7 @@ jobs:
           git push origin master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
 
 
 
