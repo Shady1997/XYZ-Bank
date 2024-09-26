@@ -1,4 +1,4 @@
-name: Run Selenium Maven Tests
+name: XYZ Bank Tests
 
 on:
   push:
@@ -58,12 +58,25 @@ jobs:
         run: |
           git config --global user.name "Shady1997"
           git config --global user.email "shadyahmed9719@gmail.com"
-          git pull origin master
-          git add .
-          git commit -m "Update Selenium test report"
-          git push origin master
+          
+          # Clean the workspace from unwanted files
+          git reset --hard  # Revert any unnecessary changes
+          git clean -fd     # Clean up untracked files
+          
+          # Add only the HTML reports if necessary
+          git add index.html
+          
+          # Check if there are any changes to commit
+          if [[ -n $(git status --porcelain) ]]; then
+            git commit -m "Update Selenium test report"
+            git pull --rebase origin master  # Rebase to avoid conflicts
+            git push origin master
+          else
+            echo "No changes to commit"
+          fi
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
 
 
 
