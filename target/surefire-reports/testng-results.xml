@@ -1,33 +1,103 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="6" total="14" passed="8" failed="0" skipped="0">
+<testng-results ignored="6" total="14" passed="0" failed="0" skipped="8">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-09-27T00:26:58 EEST" name="Test XYZ-Bank Web Application" finished-at="2024-09-27T00:27:57 EEST" duration-ms="59308">
+  <suite started-at="2024-09-26T21:59:26 UTC" name="Test XYZ-Bank Web Application" finished-at="2024-09-26T21:59:27 UTC" duration-ms="928">
     <groups>
       <group name="smoke">
-        <method signature="TestBase.startApplication()[pri:1, instance:test_cases.TestCase001_CustomerLogin@5c7933ad]" name="startApplication" class="test_cases.TestBase"/>
-        <method signature="TestBase.startApplication()[pri:1, instance:test_cases.TestCase002_MakeDeposite@33ecda92]" name="startApplication" class="test_cases.TestBase"/>
-        <method signature="TestBase.startApplication()[pri:1, instance:test_cases.TestCase003_MakeWithdraw@14fc5f04]" name="startApplication" class="test_cases.TestBase"/>
-        <method signature="TestBase.startApplication()[pri:1, instance:test_cases.TestCase004_CheckTransactionType@6e2829c7]" name="startApplication" class="test_cases.TestBase"/>
-        <method signature="TestCase001_CustomerLogin.customerLogin()[pri:2, instance:test_cases.TestCase001_CustomerLogin@5c7933ad]" name="customerLogin" class="test_cases.TestCase001_CustomerLogin"/>
-        <method signature="TestCase002_MakeDeposite.makeNewDeposite()[pri:3, instance:test_cases.TestCase002_MakeDeposite@33ecda92]" name="makeNewDeposite" class="test_cases.TestCase002_MakeDeposite"/>
-        <method signature="TestCase003_MakeWithdraw.makeNewWithdraw()[pri:4, instance:test_cases.TestCase003_MakeWithdraw@14fc5f04]" name="makeNewWithdraw" class="test_cases.TestCase003_MakeWithdraw"/>
-        <method signature="TestCase004_CheckTransactionType.checkTransactionType()[pri:5, instance:test_cases.TestCase004_CheckTransactionType@6e2829c7]" name="checkTransactionType" class="test_cases.TestCase004_CheckTransactionType"/>
+        <method signature="TestBase.startApplication()[pri:1, instance:test_cases.TestCase001_CustomerLogin@15bb5034]" name="startApplication" class="test_cases.TestBase"/>
+        <method signature="TestBase.startApplication()[pri:1, instance:test_cases.TestCase002_MakeDeposite@25ce9dc4]" name="startApplication" class="test_cases.TestBase"/>
+        <method signature="TestBase.startApplication()[pri:1, instance:test_cases.TestCase003_MakeWithdraw@74ea2410]" name="startApplication" class="test_cases.TestBase"/>
+        <method signature="TestBase.startApplication()[pri:1, instance:test_cases.TestCase004_CheckTransactionType@17f62e33]" name="startApplication" class="test_cases.TestBase"/>
+        <method signature="TestCase001_CustomerLogin.customerLogin()[pri:2, instance:test_cases.TestCase001_CustomerLogin@15bb5034]" name="customerLogin" class="test_cases.TestCase001_CustomerLogin"/>
+        <method signature="TestCase002_MakeDeposite.makeNewDeposite()[pri:3, instance:test_cases.TestCase002_MakeDeposite@25ce9dc4]" name="makeNewDeposite" class="test_cases.TestCase002_MakeDeposite"/>
+        <method signature="TestCase003_MakeWithdraw.makeNewWithdraw()[pri:4, instance:test_cases.TestCase003_MakeWithdraw@74ea2410]" name="makeNewWithdraw" class="test_cases.TestCase003_MakeWithdraw"/>
+        <method signature="TestCase004_CheckTransactionType.checkTransactionType()[pri:5, instance:test_cases.TestCase004_CheckTransactionType@17f62e33]" name="checkTransactionType" class="test_cases.TestCase004_CheckTransactionType"/>
       </group> <!-- smoke -->
     </groups>
-    <test started-at="2024-09-27T00:26:58 EEST" name="Test Login to XYZ-Bank and Make Full Transaction" finished-at="2024-09-27T00:27:57 EEST" duration-ms="59308">
+    <test started-at="2024-09-26T21:59:26 UTC" name="Test Login to XYZ-Bank and Make Full Transaction" finished-at="2024-09-26T21:59:27 UTC" duration-ms="928">
       <class name="test_cases.TestCase004_CheckTransactionType">
-        <test-method signature="startApplication()[pri:1, instance:test_cases.TestCase004_CheckTransactionType@6e2829c7]" started-at="2024-09-27T00:27:43 EEST" name="startApplication" description="Start XYZ-Bank Web Application" finished-at="2024-09-27T00:27:43 EEST" duration-ms="54" status="PASS">
+        <test-method signature="startApplication()[pri:1, instance:test_cases.TestCase004_CheckTransactionType@17f62e33]" started-at="2024-09-26T21:59:27 UTC" name="startApplication" description="Start XYZ-Bank Web Application" finished-at="2024-09-26T21:59:27 UTC" duration-ms="1" status="SKIP">
+          <exception class="java.lang.NoSuchMethodError">
+            <message>
+              <![CDATA['org.apache.commons.compress.archivers.tar.TarArchiveEntry org.apache.commons.compress.archivers.tar.TarArchiveInputStream.getNextEntry()']]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NoSuchMethodError: 'org.apache.commons.compress.archivers.tar.TarArchiveEntry org.apache.commons.compress.archivers.tar.TarArchiveInputStream.getNextEntry()'
+at io.github.bonigarcia.wdm.online.Downloader.unTarGz(Downloader.java:280)
+at io.github.bonigarcia.wdm.online.Downloader.extract(Downloader.java:192)
+at io.github.bonigarcia.wdm.online.Downloader.downloadAndExtract(Downloader.java:139)
+at io.github.bonigarcia.wdm.online.Downloader.download(Downloader.java:91)
+at io.github.bonigarcia.wdm.WebDriverManager.download(WebDriverManager.java:1273)
+at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1184)
+at io.github.bonigarcia.wdm.WebDriverManager.setup(WebDriverManager.java:427)
+at test_cases.TestBase.setupDriver(TestBase.java:66)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
+at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:644)
+at org.testng.TestRunner.beforeRun(TestRunner.java:633)
+at org.testng.TestRunner.run(TestRunner.java:595)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:475)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:840)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NoSuchMethodError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startApplication -->
-        <test-method signature="checkTransactionType()[pri:5, instance:test_cases.TestCase004_CheckTransactionType@6e2829c7]" started-at="2024-09-27T00:27:50 EEST" name="checkTransactionType" description="Check Last Transaction Type" finished-at="2024-09-27T00:27:54 EEST" duration-ms="4404" status="PASS">
+        <test-method signature="checkTransactionType()[pri:5, instance:test_cases.TestCase004_CheckTransactionType@17f62e33]" started-at="2024-09-26T21:59:27 UTC" name="checkTransactionType" description="Check Last Transaction Type" finished-at="2024-09-26T21:59:27 UTC" duration-ms="0" status="SKIP">
+          <exception class="java.lang.NoSuchMethodError">
+            <message>
+              <![CDATA['org.apache.commons.compress.archivers.tar.TarArchiveEntry org.apache.commons.compress.archivers.tar.TarArchiveInputStream.getNextEntry()']]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NoSuchMethodError: 'org.apache.commons.compress.archivers.tar.TarArchiveEntry org.apache.commons.compress.archivers.tar.TarArchiveInputStream.getNextEntry()'
+at io.github.bonigarcia.wdm.online.Downloader.unTarGz(Downloader.java:280)
+at io.github.bonigarcia.wdm.online.Downloader.extract(Downloader.java:192)
+at io.github.bonigarcia.wdm.online.Downloader.downloadAndExtract(Downloader.java:139)
+at io.github.bonigarcia.wdm.online.Downloader.download(Downloader.java:91)
+at io.github.bonigarcia.wdm.WebDriverManager.download(WebDriverManager.java:1273)
+at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1184)
+at io.github.bonigarcia.wdm.WebDriverManager.setup(WebDriverManager.java:427)
+at test_cases.TestBase.setupDriver(TestBase.java:66)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
+at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:644)
+at org.testng.TestRunner.beforeRun(TestRunner.java:633)
+at org.testng.TestRunner.run(TestRunner.java:595)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:475)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:840)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NoSuchMethodError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkTransactionType -->
       </class> <!-- test_cases.TestCase004_CheckTransactionType -->
       <class name="test_cases.TestCase001_CustomerLogin">
-        <test-method is-config="true" signature="setupDriver(java.lang.String)[pri:0, instance:test_cases.TestCase001_CustomerLogin@5c7933ad]" started-at="2024-09-27T00:26:58 EEST" name="setupDriver" finished-at="2024-09-27T00:27:38 EEST" duration-ms="39720" status="PASS">
+        <test-method is-config="true" signature="setupDriver(java.lang.String)[pri:0, instance:test_cases.TestCase001_CustomerLogin@15bb5034]" started-at="2024-09-26T21:59:26 UTC" name="setupDriver" finished-at="2024-09-26T21:59:27 UTC" duration-ms="795" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -35,38 +105,283 @@
               </value>
             </param>
           </params>
+          <exception class="java.lang.NoSuchMethodError">
+            <message>
+              <![CDATA['org.apache.commons.compress.archivers.tar.TarArchiveEntry org.apache.commons.compress.archivers.tar.TarArchiveInputStream.getNextEntry()']]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NoSuchMethodError: 'org.apache.commons.compress.archivers.tar.TarArchiveEntry org.apache.commons.compress.archivers.tar.TarArchiveInputStream.getNextEntry()'
+at io.github.bonigarcia.wdm.online.Downloader.unTarGz(Downloader.java:280)
+at io.github.bonigarcia.wdm.online.Downloader.extract(Downloader.java:192)
+at io.github.bonigarcia.wdm.online.Downloader.downloadAndExtract(Downloader.java:139)
+at io.github.bonigarcia.wdm.online.Downloader.download(Downloader.java:91)
+at io.github.bonigarcia.wdm.WebDriverManager.download(WebDriverManager.java:1273)
+at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1184)
+at io.github.bonigarcia.wdm.WebDriverManager.setup(WebDriverManager.java:427)
+at test_cases.TestBase.setupDriver(TestBase.java:66)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
+at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:644)
+at org.testng.TestRunner.beforeRun(TestRunner.java:633)
+at org.testng.TestRunner.run(TestRunner.java:595)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:475)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:840)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NoSuchMethodError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupDriver -->
-        <test-method signature="startApplication()[pri:1, instance:test_cases.TestCase001_CustomerLogin@5c7933ad]" started-at="2024-09-27T00:27:38 EEST" name="startApplication" description="Start XYZ-Bank Web Application" finished-at="2024-09-27T00:27:43 EEST" duration-ms="4660" status="PASS">
+        <test-method signature="startApplication()[pri:1, instance:test_cases.TestCase001_CustomerLogin@15bb5034]" started-at="2024-09-26T21:59:27 UTC" name="startApplication" description="Start XYZ-Bank Web Application" finished-at="2024-09-26T21:59:27 UTC" duration-ms="0" status="SKIP">
+          <exception class="java.lang.NoSuchMethodError">
+            <message>
+              <![CDATA['org.apache.commons.compress.archivers.tar.TarArchiveEntry org.apache.commons.compress.archivers.tar.TarArchiveInputStream.getNextEntry()']]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NoSuchMethodError: 'org.apache.commons.compress.archivers.tar.TarArchiveEntry org.apache.commons.compress.archivers.tar.TarArchiveInputStream.getNextEntry()'
+at io.github.bonigarcia.wdm.online.Downloader.unTarGz(Downloader.java:280)
+at io.github.bonigarcia.wdm.online.Downloader.extract(Downloader.java:192)
+at io.github.bonigarcia.wdm.online.Downloader.downloadAndExtract(Downloader.java:139)
+at io.github.bonigarcia.wdm.online.Downloader.download(Downloader.java:91)
+at io.github.bonigarcia.wdm.WebDriverManager.download(WebDriverManager.java:1273)
+at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1184)
+at io.github.bonigarcia.wdm.WebDriverManager.setup(WebDriverManager.java:427)
+at test_cases.TestBase.setupDriver(TestBase.java:66)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
+at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:644)
+at org.testng.TestRunner.beforeRun(TestRunner.java:633)
+at org.testng.TestRunner.run(TestRunner.java:595)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:475)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:840)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NoSuchMethodError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startApplication -->
-        <test-method signature="customerLogin()[pri:2, instance:test_cases.TestCase001_CustomerLogin@5c7933ad]" started-at="2024-09-27T00:27:43 EEST" name="customerLogin" description="Customer Login" finished-at="2024-09-27T00:27:46 EEST" duration-ms="2778" status="PASS">
+        <test-method signature="customerLogin()[pri:2, instance:test_cases.TestCase001_CustomerLogin@15bb5034]" started-at="2024-09-26T21:59:27 UTC" name="customerLogin" description="Customer Login" finished-at="2024-09-26T21:59:27 UTC" duration-ms="0" status="SKIP">
+          <exception class="java.lang.NoSuchMethodError">
+            <message>
+              <![CDATA['org.apache.commons.compress.archivers.tar.TarArchiveEntry org.apache.commons.compress.archivers.tar.TarArchiveInputStream.getNextEntry()']]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NoSuchMethodError: 'org.apache.commons.compress.archivers.tar.TarArchiveEntry org.apache.commons.compress.archivers.tar.TarArchiveInputStream.getNextEntry()'
+at io.github.bonigarcia.wdm.online.Downloader.unTarGz(Downloader.java:280)
+at io.github.bonigarcia.wdm.online.Downloader.extract(Downloader.java:192)
+at io.github.bonigarcia.wdm.online.Downloader.downloadAndExtract(Downloader.java:139)
+at io.github.bonigarcia.wdm.online.Downloader.download(Downloader.java:91)
+at io.github.bonigarcia.wdm.WebDriverManager.download(WebDriverManager.java:1273)
+at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1184)
+at io.github.bonigarcia.wdm.WebDriverManager.setup(WebDriverManager.java:427)
+at test_cases.TestBase.setupDriver(TestBase.java:66)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
+at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:644)
+at org.testng.TestRunner.beforeRun(TestRunner.java:633)
+at org.testng.TestRunner.run(TestRunner.java:595)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:475)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:840)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NoSuchMethodError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- customerLogin -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:test_cases.TestCase001_CustomerLogin@5c7933ad]" started-at="2024-09-27T00:27:54 EEST" name="tearDown" finished-at="2024-09-27T00:27:57 EEST" duration-ms="3326" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:test_cases.TestCase001_CustomerLogin@15bb5034]" started-at="2024-09-26T21:59:27 UTC" name="tearDown" finished-at="2024-09-26T21:59:27 UTC" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- test_cases.TestCase001_CustomerLogin -->
       <class name="test_cases.TestCase002_MakeDeposite">
-        <test-method signature="startApplication()[pri:1, instance:test_cases.TestCase002_MakeDeposite@33ecda92]" started-at="2024-09-27T00:27:43 EEST" name="startApplication" description="Start XYZ-Bank Web Application" finished-at="2024-09-27T00:27:43 EEST" duration-ms="33" status="PASS">
+        <test-method signature="startApplication()[pri:1, instance:test_cases.TestCase002_MakeDeposite@25ce9dc4]" started-at="2024-09-26T21:59:27 UTC" name="startApplication" description="Start XYZ-Bank Web Application" finished-at="2024-09-26T21:59:27 UTC" duration-ms="0" status="SKIP">
+          <exception class="java.lang.NoSuchMethodError">
+            <message>
+              <![CDATA['org.apache.commons.compress.archivers.tar.TarArchiveEntry org.apache.commons.compress.archivers.tar.TarArchiveInputStream.getNextEntry()']]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NoSuchMethodError: 'org.apache.commons.compress.archivers.tar.TarArchiveEntry org.apache.commons.compress.archivers.tar.TarArchiveInputStream.getNextEntry()'
+at io.github.bonigarcia.wdm.online.Downloader.unTarGz(Downloader.java:280)
+at io.github.bonigarcia.wdm.online.Downloader.extract(Downloader.java:192)
+at io.github.bonigarcia.wdm.online.Downloader.downloadAndExtract(Downloader.java:139)
+at io.github.bonigarcia.wdm.online.Downloader.download(Downloader.java:91)
+at io.github.bonigarcia.wdm.WebDriverManager.download(WebDriverManager.java:1273)
+at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1184)
+at io.github.bonigarcia.wdm.WebDriverManager.setup(WebDriverManager.java:427)
+at test_cases.TestBase.setupDriver(TestBase.java:66)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
+at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:644)
+at org.testng.TestRunner.beforeRun(TestRunner.java:633)
+at org.testng.TestRunner.run(TestRunner.java:595)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:475)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:840)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NoSuchMethodError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startApplication -->
-        <test-method signature="makeNewDeposite()[pri:3, instance:test_cases.TestCase002_MakeDeposite@33ecda92]" started-at="2024-09-27T00:27:46 EEST" name="makeNewDeposite" description="Make New Deposite" finished-at="2024-09-27T00:27:47 EEST" duration-ms="1044" status="PASS">
+        <test-method signature="makeNewDeposite()[pri:3, instance:test_cases.TestCase002_MakeDeposite@25ce9dc4]" started-at="2024-09-26T21:59:27 UTC" name="makeNewDeposite" description="Make New Deposite" finished-at="2024-09-26T21:59:27 UTC" duration-ms="0" status="SKIP">
+          <exception class="java.lang.NoSuchMethodError">
+            <message>
+              <![CDATA['org.apache.commons.compress.archivers.tar.TarArchiveEntry org.apache.commons.compress.archivers.tar.TarArchiveInputStream.getNextEntry()']]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NoSuchMethodError: 'org.apache.commons.compress.archivers.tar.TarArchiveEntry org.apache.commons.compress.archivers.tar.TarArchiveInputStream.getNextEntry()'
+at io.github.bonigarcia.wdm.online.Downloader.unTarGz(Downloader.java:280)
+at io.github.bonigarcia.wdm.online.Downloader.extract(Downloader.java:192)
+at io.github.bonigarcia.wdm.online.Downloader.downloadAndExtract(Downloader.java:139)
+at io.github.bonigarcia.wdm.online.Downloader.download(Downloader.java:91)
+at io.github.bonigarcia.wdm.WebDriverManager.download(WebDriverManager.java:1273)
+at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1184)
+at io.github.bonigarcia.wdm.WebDriverManager.setup(WebDriverManager.java:427)
+at test_cases.TestBase.setupDriver(TestBase.java:66)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
+at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:644)
+at org.testng.TestRunner.beforeRun(TestRunner.java:633)
+at org.testng.TestRunner.run(TestRunner.java:595)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:475)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:840)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NoSuchMethodError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- makeNewDeposite -->
       </class> <!-- test_cases.TestCase002_MakeDeposite -->
       <class name="test_cases.TestCase003_MakeWithdraw">
-        <test-method signature="startApplication()[pri:1, instance:test_cases.TestCase003_MakeWithdraw@14fc5f04]" started-at="2024-09-27T00:27:43 EEST" name="startApplication" description="Start XYZ-Bank Web Application" finished-at="2024-09-27T00:27:43 EEST" duration-ms="24" status="PASS">
+        <test-method signature="startApplication()[pri:1, instance:test_cases.TestCase003_MakeWithdraw@74ea2410]" started-at="2024-09-26T21:59:27 UTC" name="startApplication" description="Start XYZ-Bank Web Application" finished-at="2024-09-26T21:59:27 UTC" duration-ms="0" status="SKIP">
+          <exception class="java.lang.NoSuchMethodError">
+            <message>
+              <![CDATA['org.apache.commons.compress.archivers.tar.TarArchiveEntry org.apache.commons.compress.archivers.tar.TarArchiveInputStream.getNextEntry()']]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NoSuchMethodError: 'org.apache.commons.compress.archivers.tar.TarArchiveEntry org.apache.commons.compress.archivers.tar.TarArchiveInputStream.getNextEntry()'
+at io.github.bonigarcia.wdm.online.Downloader.unTarGz(Downloader.java:280)
+at io.github.bonigarcia.wdm.online.Downloader.extract(Downloader.java:192)
+at io.github.bonigarcia.wdm.online.Downloader.downloadAndExtract(Downloader.java:139)
+at io.github.bonigarcia.wdm.online.Downloader.download(Downloader.java:91)
+at io.github.bonigarcia.wdm.WebDriverManager.download(WebDriverManager.java:1273)
+at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1184)
+at io.github.bonigarcia.wdm.WebDriverManager.setup(WebDriverManager.java:427)
+at test_cases.TestBase.setupDriver(TestBase.java:66)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
+at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:644)
+at org.testng.TestRunner.beforeRun(TestRunner.java:633)
+at org.testng.TestRunner.run(TestRunner.java:595)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:475)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:840)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NoSuchMethodError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startApplication -->
-        <test-method signature="makeNewWithdraw()[pri:4, instance:test_cases.TestCase003_MakeWithdraw@14fc5f04]" started-at="2024-09-27T00:27:47 EEST" name="makeNewWithdraw" description="Make New Withdraw" finished-at="2024-09-27T00:27:50 EEST" duration-ms="2886" status="PASS">
+        <test-method signature="makeNewWithdraw()[pri:4, instance:test_cases.TestCase003_MakeWithdraw@74ea2410]" started-at="2024-09-26T21:59:27 UTC" name="makeNewWithdraw" description="Make New Withdraw" finished-at="2024-09-26T21:59:27 UTC" duration-ms="0" status="SKIP">
+          <exception class="java.lang.NoSuchMethodError">
+            <message>
+              <![CDATA['org.apache.commons.compress.archivers.tar.TarArchiveEntry org.apache.commons.compress.archivers.tar.TarArchiveInputStream.getNextEntry()']]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NoSuchMethodError: 'org.apache.commons.compress.archivers.tar.TarArchiveEntry org.apache.commons.compress.archivers.tar.TarArchiveInputStream.getNextEntry()'
+at io.github.bonigarcia.wdm.online.Downloader.unTarGz(Downloader.java:280)
+at io.github.bonigarcia.wdm.online.Downloader.extract(Downloader.java:192)
+at io.github.bonigarcia.wdm.online.Downloader.downloadAndExtract(Downloader.java:139)
+at io.github.bonigarcia.wdm.online.Downloader.download(Downloader.java:91)
+at io.github.bonigarcia.wdm.WebDriverManager.download(WebDriverManager.java:1273)
+at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1184)
+at io.github.bonigarcia.wdm.WebDriverManager.setup(WebDriverManager.java:427)
+at test_cases.TestBase.setupDriver(TestBase.java:66)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
+at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:644)
+at org.testng.TestRunner.beforeRun(TestRunner.java:633)
+at org.testng.TestRunner.run(TestRunner.java:595)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:475)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:840)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NoSuchMethodError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- makeNewWithdraw -->
