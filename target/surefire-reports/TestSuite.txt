@@ -1,4 +1,7 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 61.037 s - in TestSuite
+Tests run: 10, Failures: 1, Errors: 0, Skipped: 9, Time elapsed: 1.539 s <<< FAILURE! - in TestSuite
+test_cases.TestCase001_CustomerLogin.setupDriver[Firefox](0)  Time elapsed: 1.367 s  <<< FAILURE!
+java.lang.NoSuchMethodError: 'org.apache.commons.compress.archivers.tar.TarArchiveEntry org.apache.commons.compress.archivers.tar.TarArchiveInputStream.getNextEntry()'
+

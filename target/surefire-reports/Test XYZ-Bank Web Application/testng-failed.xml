@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="1" parallel="tests" name="Failed suite [Test XYZ-Bank Web Application]" guice-stage="DEVELOPMENT" verbose="0">
+  <listeners>
+    <listener class-name="testNGListener.Listener"/>
+    <listener class-name="reports.MyListener"/>
+  </listeners>
+  <test thread-count="1" parallel="tests" name="Test Login to XYZ-Bank and Make Full Transaction(failed)" verbose="0">
+    <parameter name="browser" value="Firefox"/>
+    <classes>
+      <class name="test_cases.TestCase003_MakeWithdraw">
+        <methods>
+          <include name="makeNewWithdraw"/>
+          <include name="setupDriver"/>
+          <include name="startApplication"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- test_cases.TestCase003_MakeWithdraw -->
+      <class name="test_cases.TestCase004_CheckTransactionType">
+        <methods>
+          <include name="setupDriver"/>
+          <include name="startApplication"/>
+          <include name="tearDown"/>
+          <include name="checkTransactionType"/>
+        </methods>
+      </class> <!-- test_cases.TestCase004_CheckTransactionType -->
+      <class name="test_cases.TestCase001_CustomerLogin">
+        <methods>
+          <include name="customerLogin"/>
+          <include name="setupDriver"/>
+          <include name="startApplication"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- test_cases.TestCase001_CustomerLogin -->
+      <class name="test_cases.TestCase002_MakeDeposite">
+        <methods>
+          <include name="makeNewDeposite"/>
+          <include name="setupDriver"/>
+          <include name="startApplication"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- test_cases.TestCase002_MakeDeposite -->
+    </classes>
+  </test> <!-- Test Login to XYZ-Bank and Make Full Transaction(failed) -->
+</suite> <!-- Failed suite [Test XYZ-Bank Web Application] -->

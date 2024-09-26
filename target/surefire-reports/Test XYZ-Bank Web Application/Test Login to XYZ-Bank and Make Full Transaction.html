@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test Login to XYZ-Bank and Make Full Transaction</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>8/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/0/8</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Sep 27 00:26:58 EEST 2024</td>
+<td>Started on:</td><td>Thu Sep 26 21:59:26 UTC 2024</td>
 </tr>
-<tr><td>Total time:</td><td>59 seconds (59308 ms)</td>
+<tr><td>Total time:</td><td>0 seconds (928 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,8 +67,8 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td><b>Attribute(s)</b></td>
 <td width="30%"><b>Exception</b></td>
@@ -76,45 +76,442 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='test_cases.TestCase001_CustomerLogin.customerLogin()'><b>customerLogin</b><br>Test class: test_cases.TestCase001_CustomerLogin<br>Test method: Customer Login</td>
-<td></td>
-<td>2</td>
-<td>test_cases.TestCase001_CustomerLogin@5c7933ad</td></tr>
+<td title='test_cases.TestCase001_CustomerLogin.setupDriver()'><b>setupDriver</b><br>Test class: test_cases.TestCase001_CustomerLogin<br>Parameters: Firefox</td>
+<td><div><pre>java.lang.NoSuchMethodError: &apos;org.apache.commons.compress.archivers.tar.TarArchiveEntry org.apache.commons.compress.archivers.tar.TarArchiveInputStream.getNextEntry()&apos;
+	at io.github.bonigarcia.wdm.online.Downloader.unTarGz(Downloader.java:280)
+	at io.github.bonigarcia.wdm.online.Downloader.extract(Downloader.java:192)
+	at io.github.bonigarcia.wdm.online.Downloader.downloadAndExtract(Downloader.java:139)
+	at io.github.bonigarcia.wdm.online.Downloader.download(Downloader.java:91)
+	at io.github.bonigarcia.wdm.WebDriverManager.download(WebDriverManager.java:1273)
+	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1184)
+	at io.github.bonigarcia.wdm.WebDriverManager.setup(WebDriverManager.java:427)
+	at test_cases.TestBase.setupDriver(TestBase.java:66)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+... Removed 14 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace902136386", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace902136386'><pre>java.lang.NoSuchMethodError: &apos;org.apache.commons.compress.archivers.tar.TarArchiveEntry org.apache.commons.compress.archivers.tar.TarArchiveInputStream.getNextEntry()&apos;
+	at io.github.bonigarcia.wdm.online.Downloader.unTarGz(Downloader.java:280)
+	at io.github.bonigarcia.wdm.online.Downloader.extract(Downloader.java:192)
+	at io.github.bonigarcia.wdm.online.Downloader.downloadAndExtract(Downloader.java:139)
+	at io.github.bonigarcia.wdm.online.Downloader.download(Downloader.java:91)
+	at io.github.bonigarcia.wdm.WebDriverManager.download(WebDriverManager.java:1273)
+	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1184)
+	at io.github.bonigarcia.wdm.WebDriverManager.setup(WebDriverManager.java:427)
+	at test_cases.TestBase.setupDriver(TestBase.java:66)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
+	at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:644)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:633)
+	at org.testng.TestRunner.run(TestRunner.java:595)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:475)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+</pre></div></td>
+<td>0</td>
+<td>test_cases.TestCase001_CustomerLogin@15bb5034</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
 <tr>
-<td title='test_cases.TestCase001_CustomerLogin.startApplication()'><b>startApplication</b><br>Test class: test_cases.TestCase001_CustomerLogin<br>Test method: Start XYZ-Bank Web Application</td>
-<td></td>
-<td>4</td>
-<td>test_cases.TestCase001_CustomerLogin@5c7933ad</td></tr>
-<tr>
-<td title='test_cases.TestCase003_MakeWithdraw.startApplication()'><b>startApplication</b><br>Test class: test_cases.TestCase003_MakeWithdraw<br>Test method: Start XYZ-Bank Web Application</td>
+<td title='test_cases.TestCase001_CustomerLogin.tearDown()'><b>tearDown</b><br>Test class: test_cases.TestCase001_CustomerLogin</td>
 <td></td>
 <td>0</td>
-<td>test_cases.TestCase003_MakeWithdraw@14fc5f04</td></tr>
-<tr>
-<td title='test_cases.TestCase003_MakeWithdraw.makeNewWithdraw()'><b>makeNewWithdraw</b><br>Test class: test_cases.TestCase003_MakeWithdraw<br>Test method: Make New Withdraw</td>
-<td></td>
-<td>2</td>
-<td>test_cases.TestCase003_MakeWithdraw@14fc5f04</td></tr>
-<tr>
-<td title='test_cases.TestCase004_CheckTransactionType.checkTransactionType()'><b>checkTransactionType</b><br>Test class: test_cases.TestCase004_CheckTransactionType<br>Test method: Check Last Transaction Type</td>
-<td></td>
-<td>4</td>
-<td>test_cases.TestCase004_CheckTransactionType@6e2829c7</td></tr>
-<tr>
-<td title='test_cases.TestCase004_CheckTransactionType.startApplication()'><b>startApplication</b><br>Test class: test_cases.TestCase004_CheckTransactionType<br>Test method: Start XYZ-Bank Web Application</td>
-<td></td>
-<td>0</td>
-<td>test_cases.TestCase004_CheckTransactionType@6e2829c7</td></tr>
+<td>test_cases.TestCase001_CustomerLogin@15bb5034</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
 <tr>
 <td title='test_cases.TestCase002_MakeDeposite.makeNewDeposite()'><b>makeNewDeposite</b><br>Test class: test_cases.TestCase002_MakeDeposite<br>Test method: Make New Deposite</td>
-<td></td>
-<td>1</td>
-<td>test_cases.TestCase002_MakeDeposite@33ecda92</td></tr>
+<td><div><pre>java.lang.NoSuchMethodError: &apos;org.apache.commons.compress.archivers.tar.TarArchiveEntry org.apache.commons.compress.archivers.tar.TarArchiveInputStream.getNextEntry()&apos;
+	at io.github.bonigarcia.wdm.online.Downloader.unTarGz(Downloader.java:280)
+	at io.github.bonigarcia.wdm.online.Downloader.extract(Downloader.java:192)
+	at io.github.bonigarcia.wdm.online.Downloader.downloadAndExtract(Downloader.java:139)
+	at io.github.bonigarcia.wdm.online.Downloader.download(Downloader.java:91)
+	at io.github.bonigarcia.wdm.WebDriverManager.download(WebDriverManager.java:1273)
+	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1184)
+	at io.github.bonigarcia.wdm.WebDriverManager.setup(WebDriverManager.java:427)
+	at test_cases.TestBase.setupDriver(TestBase.java:66)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+... Removed 14 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1408231551", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1408231551'><pre>java.lang.NoSuchMethodError: &apos;org.apache.commons.compress.archivers.tar.TarArchiveEntry org.apache.commons.compress.archivers.tar.TarArchiveInputStream.getNextEntry()&apos;
+	at io.github.bonigarcia.wdm.online.Downloader.unTarGz(Downloader.java:280)
+	at io.github.bonigarcia.wdm.online.Downloader.extract(Downloader.java:192)
+	at io.github.bonigarcia.wdm.online.Downloader.downloadAndExtract(Downloader.java:139)
+	at io.github.bonigarcia.wdm.online.Downloader.download(Downloader.java:91)
+	at io.github.bonigarcia.wdm.WebDriverManager.download(WebDriverManager.java:1273)
+	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1184)
+	at io.github.bonigarcia.wdm.WebDriverManager.setup(WebDriverManager.java:427)
+	at test_cases.TestBase.setupDriver(TestBase.java:66)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
+	at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:644)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:633)
+	at org.testng.TestRunner.run(TestRunner.java:595)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:475)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+</pre></div></td>
+<td>0</td>
+<td>test_cases.TestCase002_MakeDeposite@25ce9dc4</td></tr>
+<tr>
+<td title='test_cases.TestCase003_MakeWithdraw.makeNewWithdraw()'><b>makeNewWithdraw</b><br>Test class: test_cases.TestCase003_MakeWithdraw<br>Test method: Make New Withdraw</td>
+<td><div><pre>java.lang.NoSuchMethodError: &apos;org.apache.commons.compress.archivers.tar.TarArchiveEntry org.apache.commons.compress.archivers.tar.TarArchiveInputStream.getNextEntry()&apos;
+	at io.github.bonigarcia.wdm.online.Downloader.unTarGz(Downloader.java:280)
+	at io.github.bonigarcia.wdm.online.Downloader.extract(Downloader.java:192)
+	at io.github.bonigarcia.wdm.online.Downloader.downloadAndExtract(Downloader.java:139)
+	at io.github.bonigarcia.wdm.online.Downloader.download(Downloader.java:91)
+	at io.github.bonigarcia.wdm.WebDriverManager.download(WebDriverManager.java:1273)
+	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1184)
+	at io.github.bonigarcia.wdm.WebDriverManager.setup(WebDriverManager.java:427)
+	at test_cases.TestBase.setupDriver(TestBase.java:66)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+... Removed 14 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1712657956", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1712657956'><pre>java.lang.NoSuchMethodError: &apos;org.apache.commons.compress.archivers.tar.TarArchiveEntry org.apache.commons.compress.archivers.tar.TarArchiveInputStream.getNextEntry()&apos;
+	at io.github.bonigarcia.wdm.online.Downloader.unTarGz(Downloader.java:280)
+	at io.github.bonigarcia.wdm.online.Downloader.extract(Downloader.java:192)
+	at io.github.bonigarcia.wdm.online.Downloader.downloadAndExtract(Downloader.java:139)
+	at io.github.bonigarcia.wdm.online.Downloader.download(Downloader.java:91)
+	at io.github.bonigarcia.wdm.WebDriverManager.download(WebDriverManager.java:1273)
+	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1184)
+	at io.github.bonigarcia.wdm.WebDriverManager.setup(WebDriverManager.java:427)
+	at test_cases.TestBase.setupDriver(TestBase.java:66)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
+	at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:644)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:633)
+	at org.testng.TestRunner.run(TestRunner.java:595)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:475)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+</pre></div></td>
+<td>0</td>
+<td>test_cases.TestCase003_MakeWithdraw@74ea2410</td></tr>
 <tr>
 <td title='test_cases.TestCase002_MakeDeposite.startApplication()'><b>startApplication</b><br>Test class: test_cases.TestCase002_MakeDeposite<br>Test method: Start XYZ-Bank Web Application</td>
-<td></td>
+<td><div><pre>java.lang.NoSuchMethodError: &apos;org.apache.commons.compress.archivers.tar.TarArchiveEntry org.apache.commons.compress.archivers.tar.TarArchiveInputStream.getNextEntry()&apos;
+	at io.github.bonigarcia.wdm.online.Downloader.unTarGz(Downloader.java:280)
+	at io.github.bonigarcia.wdm.online.Downloader.extract(Downloader.java:192)
+	at io.github.bonigarcia.wdm.online.Downloader.downloadAndExtract(Downloader.java:139)
+	at io.github.bonigarcia.wdm.online.Downloader.download(Downloader.java:91)
+	at io.github.bonigarcia.wdm.WebDriverManager.download(WebDriverManager.java:1273)
+	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1184)
+	at io.github.bonigarcia.wdm.WebDriverManager.setup(WebDriverManager.java:427)
+	at test_cases.TestBase.setupDriver(TestBase.java:66)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+... Removed 14 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2125900900", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2125900900'><pre>java.lang.NoSuchMethodError: &apos;org.apache.commons.compress.archivers.tar.TarArchiveEntry org.apache.commons.compress.archivers.tar.TarArchiveInputStream.getNextEntry()&apos;
+	at io.github.bonigarcia.wdm.online.Downloader.unTarGz(Downloader.java:280)
+	at io.github.bonigarcia.wdm.online.Downloader.extract(Downloader.java:192)
+	at io.github.bonigarcia.wdm.online.Downloader.downloadAndExtract(Downloader.java:139)
+	at io.github.bonigarcia.wdm.online.Downloader.download(Downloader.java:91)
+	at io.github.bonigarcia.wdm.WebDriverManager.download(WebDriverManager.java:1273)
+	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1184)
+	at io.github.bonigarcia.wdm.WebDriverManager.setup(WebDriverManager.java:427)
+	at test_cases.TestBase.setupDriver(TestBase.java:66)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
+	at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:644)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:633)
+	at org.testng.TestRunner.run(TestRunner.java:595)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:475)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+</pre></div></td>
 <td>0</td>
-<td>test_cases.TestCase002_MakeDeposite@33ecda92</td></tr>
+<td>test_cases.TestCase002_MakeDeposite@25ce9dc4</td></tr>
+<tr>
+<td title='test_cases.TestCase004_CheckTransactionType.checkTransactionType()'><b>checkTransactionType</b><br>Test class: test_cases.TestCase004_CheckTransactionType<br>Test method: Check Last Transaction Type</td>
+<td><div><pre>java.lang.NoSuchMethodError: &apos;org.apache.commons.compress.archivers.tar.TarArchiveEntry org.apache.commons.compress.archivers.tar.TarArchiveInputStream.getNextEntry()&apos;
+	at io.github.bonigarcia.wdm.online.Downloader.unTarGz(Downloader.java:280)
+	at io.github.bonigarcia.wdm.online.Downloader.extract(Downloader.java:192)
+	at io.github.bonigarcia.wdm.online.Downloader.downloadAndExtract(Downloader.java:139)
+	at io.github.bonigarcia.wdm.online.Downloader.download(Downloader.java:91)
+	at io.github.bonigarcia.wdm.WebDriverManager.download(WebDriverManager.java:1273)
+	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1184)
+	at io.github.bonigarcia.wdm.WebDriverManager.setup(WebDriverManager.java:427)
+	at test_cases.TestBase.setupDriver(TestBase.java:66)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+... Removed 14 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace634739411", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace634739411'><pre>java.lang.NoSuchMethodError: &apos;org.apache.commons.compress.archivers.tar.TarArchiveEntry org.apache.commons.compress.archivers.tar.TarArchiveInputStream.getNextEntry()&apos;
+	at io.github.bonigarcia.wdm.online.Downloader.unTarGz(Downloader.java:280)
+	at io.github.bonigarcia.wdm.online.Downloader.extract(Downloader.java:192)
+	at io.github.bonigarcia.wdm.online.Downloader.downloadAndExtract(Downloader.java:139)
+	at io.github.bonigarcia.wdm.online.Downloader.download(Downloader.java:91)
+	at io.github.bonigarcia.wdm.WebDriverManager.download(WebDriverManager.java:1273)
+	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1184)
+	at io.github.bonigarcia.wdm.WebDriverManager.setup(WebDriverManager.java:427)
+	at test_cases.TestBase.setupDriver(TestBase.java:66)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
+	at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:644)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:633)
+	at org.testng.TestRunner.run(TestRunner.java:595)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:475)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+</pre></div></td>
+<td>0</td>
+<td>test_cases.TestCase004_CheckTransactionType@17f62e33</td></tr>
+<tr>
+<td title='test_cases.TestCase001_CustomerLogin.startApplication()'><b>startApplication</b><br>Test class: test_cases.TestCase001_CustomerLogin<br>Test method: Start XYZ-Bank Web Application</td>
+<td><div><pre>java.lang.NoSuchMethodError: &apos;org.apache.commons.compress.archivers.tar.TarArchiveEntry org.apache.commons.compress.archivers.tar.TarArchiveInputStream.getNextEntry()&apos;
+	at io.github.bonigarcia.wdm.online.Downloader.unTarGz(Downloader.java:280)
+	at io.github.bonigarcia.wdm.online.Downloader.extract(Downloader.java:192)
+	at io.github.bonigarcia.wdm.online.Downloader.downloadAndExtract(Downloader.java:139)
+	at io.github.bonigarcia.wdm.online.Downloader.download(Downloader.java:91)
+	at io.github.bonigarcia.wdm.WebDriverManager.download(WebDriverManager.java:1273)
+	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1184)
+	at io.github.bonigarcia.wdm.WebDriverManager.setup(WebDriverManager.java:427)
+	at test_cases.TestBase.setupDriver(TestBase.java:66)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+... Removed 14 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace327390084", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace327390084'><pre>java.lang.NoSuchMethodError: &apos;org.apache.commons.compress.archivers.tar.TarArchiveEntry org.apache.commons.compress.archivers.tar.TarArchiveInputStream.getNextEntry()&apos;
+	at io.github.bonigarcia.wdm.online.Downloader.unTarGz(Downloader.java:280)
+	at io.github.bonigarcia.wdm.online.Downloader.extract(Downloader.java:192)
+	at io.github.bonigarcia.wdm.online.Downloader.downloadAndExtract(Downloader.java:139)
+	at io.github.bonigarcia.wdm.online.Downloader.download(Downloader.java:91)
+	at io.github.bonigarcia.wdm.WebDriverManager.download(WebDriverManager.java:1273)
+	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1184)
+	at io.github.bonigarcia.wdm.WebDriverManager.setup(WebDriverManager.java:427)
+	at test_cases.TestBase.setupDriver(TestBase.java:66)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
+	at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:644)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:633)
+	at org.testng.TestRunner.run(TestRunner.java:595)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:475)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+</pre></div></td>
+<td>0</td>
+<td>test_cases.TestCase001_CustomerLogin@15bb5034</td></tr>
+<tr>
+<td title='test_cases.TestCase004_CheckTransactionType.startApplication()'><b>startApplication</b><br>Test class: test_cases.TestCase004_CheckTransactionType<br>Test method: Start XYZ-Bank Web Application</td>
+<td><div><pre>java.lang.NoSuchMethodError: &apos;org.apache.commons.compress.archivers.tar.TarArchiveEntry org.apache.commons.compress.archivers.tar.TarArchiveInputStream.getNextEntry()&apos;
+	at io.github.bonigarcia.wdm.online.Downloader.unTarGz(Downloader.java:280)
+	at io.github.bonigarcia.wdm.online.Downloader.extract(Downloader.java:192)
+	at io.github.bonigarcia.wdm.online.Downloader.downloadAndExtract(Downloader.java:139)
+	at io.github.bonigarcia.wdm.online.Downloader.download(Downloader.java:91)
+	at io.github.bonigarcia.wdm.WebDriverManager.download(WebDriverManager.java:1273)
+	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1184)
+	at io.github.bonigarcia.wdm.WebDriverManager.setup(WebDriverManager.java:427)
+	at test_cases.TestBase.setupDriver(TestBase.java:66)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+... Removed 14 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace265765645", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace265765645'><pre>java.lang.NoSuchMethodError: &apos;org.apache.commons.compress.archivers.tar.TarArchiveEntry org.apache.commons.compress.archivers.tar.TarArchiveInputStream.getNextEntry()&apos;
+	at io.github.bonigarcia.wdm.online.Downloader.unTarGz(Downloader.java:280)
+	at io.github.bonigarcia.wdm.online.Downloader.extract(Downloader.java:192)
+	at io.github.bonigarcia.wdm.online.Downloader.downloadAndExtract(Downloader.java:139)
+	at io.github.bonigarcia.wdm.online.Downloader.download(Downloader.java:91)
+	at io.github.bonigarcia.wdm.WebDriverManager.download(WebDriverManager.java:1273)
+	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1184)
+	at io.github.bonigarcia.wdm.WebDriverManager.setup(WebDriverManager.java:427)
+	at test_cases.TestBase.setupDriver(TestBase.java:66)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
+	at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:644)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:633)
+	at org.testng.TestRunner.run(TestRunner.java:595)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:475)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+</pre></div></td>
+<td>0</td>
+<td>test_cases.TestCase004_CheckTransactionType@17f62e33</td></tr>
+<tr>
+<td title='test_cases.TestCase003_MakeWithdraw.startApplication()'><b>startApplication</b><br>Test class: test_cases.TestCase003_MakeWithdraw<br>Test method: Start XYZ-Bank Web Application</td>
+<td><div><pre>java.lang.NoSuchMethodError: &apos;org.apache.commons.compress.archivers.tar.TarArchiveEntry org.apache.commons.compress.archivers.tar.TarArchiveInputStream.getNextEntry()&apos;
+	at io.github.bonigarcia.wdm.online.Downloader.unTarGz(Downloader.java:280)
+	at io.github.bonigarcia.wdm.online.Downloader.extract(Downloader.java:192)
+	at io.github.bonigarcia.wdm.online.Downloader.downloadAndExtract(Downloader.java:139)
+	at io.github.bonigarcia.wdm.online.Downloader.download(Downloader.java:91)
+	at io.github.bonigarcia.wdm.WebDriverManager.download(WebDriverManager.java:1273)
+	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1184)
+	at io.github.bonigarcia.wdm.WebDriverManager.setup(WebDriverManager.java:427)
+	at test_cases.TestBase.setupDriver(TestBase.java:66)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+... Removed 14 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace992246440", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace992246440'><pre>java.lang.NoSuchMethodError: &apos;org.apache.commons.compress.archivers.tar.TarArchiveEntry org.apache.commons.compress.archivers.tar.TarArchiveInputStream.getNextEntry()&apos;
+	at io.github.bonigarcia.wdm.online.Downloader.unTarGz(Downloader.java:280)
+	at io.github.bonigarcia.wdm.online.Downloader.extract(Downloader.java:192)
+	at io.github.bonigarcia.wdm.online.Downloader.downloadAndExtract(Downloader.java:139)
+	at io.github.bonigarcia.wdm.online.Downloader.download(Downloader.java:91)
+	at io.github.bonigarcia.wdm.WebDriverManager.download(WebDriverManager.java:1273)
+	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1184)
+	at io.github.bonigarcia.wdm.WebDriverManager.setup(WebDriverManager.java:427)
+	at test_cases.TestBase.setupDriver(TestBase.java:66)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
+	at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:644)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:633)
+	at org.testng.TestRunner.run(TestRunner.java:595)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:475)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+</pre></div></td>
+<td>0</td>
+<td>test_cases.TestCase003_MakeWithdraw@74ea2410</td></tr>
+<tr>
+<td title='test_cases.TestCase001_CustomerLogin.customerLogin()'><b>customerLogin</b><br>Test class: test_cases.TestCase001_CustomerLogin<br>Test method: Customer Login</td>
+<td><div><pre>java.lang.NoSuchMethodError: &apos;org.apache.commons.compress.archivers.tar.TarArchiveEntry org.apache.commons.compress.archivers.tar.TarArchiveInputStream.getNextEntry()&apos;
+	at io.github.bonigarcia.wdm.online.Downloader.unTarGz(Downloader.java:280)
+	at io.github.bonigarcia.wdm.online.Downloader.extract(Downloader.java:192)
+	at io.github.bonigarcia.wdm.online.Downloader.downloadAndExtract(Downloader.java:139)
+	at io.github.bonigarcia.wdm.online.Downloader.download(Downloader.java:91)
+	at io.github.bonigarcia.wdm.WebDriverManager.download(WebDriverManager.java:1273)
+	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1184)
+	at io.github.bonigarcia.wdm.WebDriverManager.setup(WebDriverManager.java:427)
+	at test_cases.TestBase.setupDriver(TestBase.java:66)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+... Removed 14 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1598310", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1598310'><pre>java.lang.NoSuchMethodError: &apos;org.apache.commons.compress.archivers.tar.TarArchiveEntry org.apache.commons.compress.archivers.tar.TarArchiveInputStream.getNextEntry()&apos;
+	at io.github.bonigarcia.wdm.online.Downloader.unTarGz(Downloader.java:280)
+	at io.github.bonigarcia.wdm.online.Downloader.extract(Downloader.java:192)
+	at io.github.bonigarcia.wdm.online.Downloader.downloadAndExtract(Downloader.java:139)
+	at io.github.bonigarcia.wdm.online.Downloader.download(Downloader.java:91)
+	at io.github.bonigarcia.wdm.WebDriverManager.download(WebDriverManager.java:1273)
+	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1184)
+	at io.github.bonigarcia.wdm.WebDriverManager.setup(WebDriverManager.java:427)
+	at test_cases.TestBase.setupDriver(TestBase.java:66)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
+	at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:644)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:633)
+	at org.testng.TestRunner.run(TestRunner.java:595)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:475)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+</pre></div></td>
+<td>0</td>
+<td>test_cases.TestCase001_CustomerLogin@15bb5034</td></tr>
 </table><p>
 </body>
 </html>
