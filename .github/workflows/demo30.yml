@@ -60,6 +60,8 @@ jobs:
           git config --global user.email "shadyahmed9719@gmail.com"
           git pull origin master
           git add .
+          # Clean untracked files to avoid merge issues
+          git clean -fd
           git commit -m "Update Selenium test report"
           git push origin master
         env:
