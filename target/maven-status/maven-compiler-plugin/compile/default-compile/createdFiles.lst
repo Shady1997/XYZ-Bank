@@ -1,5 +1,5 @@
-database/DatabaseConnection.class
-pages/HomePage.class
-pages/UserPage.class
-pages/PageBase.class
-actions/CustomWebElementDecorator.class
+database\DatabaseConnection.class
+pages\HomePage.class
+pages\PageBase.class
+pages\UserPage.class
+actions\CustomWebElementDecorator.class

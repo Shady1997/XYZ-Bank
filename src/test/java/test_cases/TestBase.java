@@ -49,6 +49,7 @@ public class TestBase {
 		options.addArguments("--no-proxy-server");
 		options.addArguments("--ignore-certificate-errors");
 		options.addArguments("--remote-allow-origins=*");
+		options.addArguments("--headless");
 		// to run headless test
 //		options.addArguments("--headless");
 
