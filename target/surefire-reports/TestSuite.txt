@@ -1,7 +1,15 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 10, Failures: 1, Errors: 0, Skipped: 9, Time elapsed: 1.539 s <<< FAILURE! - in TestSuite
-test_cases.TestCase001_CustomerLogin.setupDriver[Firefox](0)  Time elapsed: 1.367 s  <<< FAILURE!
-java.lang.NoSuchMethodError: 'org.apache.commons.compress.archivers.tar.TarArchiveEntry org.apache.commons.compress.archivers.tar.TarArchiveInputStream.getNextEntry()'
+Tests run: 10, Failures: 1, Errors: 0, Skipped: 9, Time elapsed: 2.803 s <<< FAILURE! - in TestSuite
+test_cases.TestCase001_CustomerLogin.setupDriver[Chrome](0)  Time elapsed: 2.619 s  <<< FAILURE!
+org.openqa.selenium.SessionNotCreatedException: 
+Could not start a new session. Response code 500. Message: session not created: Chrome failed to start: exited normally.
+  (session not created: DevToolsActivePort file doesn't exist)
+  (The process started from chrome location /opt/google/chrome/chrome is no longer running, so ChromeDriver is assuming that Chrome has crashed.) 
+Host info: host: 'fv-az1249-2', ip: '10.1.0.46'
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.8.0-1014-azure', java.version: '17.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goog:chromeOptions: {args: [--start-maximized, --disable-web-security, --no-proxy-server, --ignore-certificate-errors, --remote-allow-origins=*], excludeSwitches: [enable-automation], extensions: [], prefs: {credentials_enable_service: false, profile.password_manager_enabled: false}}}]}]
 

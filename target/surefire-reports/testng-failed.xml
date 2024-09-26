@@ -6,7 +6,7 @@
     <listener class-name="reports.MyListener"/>
   </listeners>
   <test thread-count="1" parallel="tests" name="Test Login to XYZ-Bank and Make Full Transaction(failed)" verbose="0">
-    <parameter name="browser" value="Firefox"/>
+    <parameter name="browser" value="Chrome"/>
     <classes>
       <class name="test_cases.TestCase003_MakeWithdraw">
         <methods>
