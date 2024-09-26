@@ -60,11 +60,13 @@ jobs:
           git config --global user.email "shadyahmed9719@gmail.com"
           
           # Clean the workspace from unwanted files
-          git reset --hard  # Revert any unnecessary changes
-          git clean -fd     # Clean up untracked files
+          # git reset --hard  # Revert any unnecessary changes
           
           # Add only the HTML reports if necessary
           git add index.html
+
+          # Clean the workspace from unwanted files
+          git clean -fd     # Clean up untracked files
           
           # Check if there are any changes to commit
           if [[ -n $(git status --porcelain) ]]; then
