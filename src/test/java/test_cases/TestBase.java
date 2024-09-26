@@ -69,7 +69,7 @@ public class TestBase {
 //			System.setProperty("webdriver.chrome.driver",
 //					System.getProperty("user.dir") + prop.getProperty("chromedriver"));
 			// use webdrivermanager
-//			WebDriverManager.chromedriver().clearDriverCache().setup();
+			WebDriverManager.chromedriver().clearDriverCache().setup();
 			driver = new ChromeDriver(options);
 		} else {
 			throw new IllegalArgumentException("Invalid browser value!!");

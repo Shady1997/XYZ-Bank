@@ -9,7 +9,7 @@
 		<listener class-name="reports.MyListener" />
 	</listeners>
 	<test name="Test Login to XYZ-Bank and Make Full Transaction">
-		<parameter name="browser" value="Firefox" />
+		<parameter name="browser" value="Chrome" />
 		<classes>
 			<class name="test_cases.TestCase001_CustomerLogin" />
 			<class name="test_cases.TestCase002_MakeDeposite" />
