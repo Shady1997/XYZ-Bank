@@ -16,6 +16,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.*;
 
@@ -41,7 +42,7 @@ public class TestBase {
 //				System.getProperty("user.dir") + "\\src\\test\\resources\\properties\\generalProperties.properties");
 //		prop = new Properties();
 //		prop.load(readProperty);
-		System.setProperty("webdriver.http.factory", "jdk-http-client");
+//		System.setProperty("webdriver.http.factory", "jdk-http-client");
 		options = new ChromeOptions();
 		options.addArguments("--start-maximized");
 		options.addArguments("--disable-web-security");
@@ -62,13 +63,13 @@ public class TestBase {
 //			System.setProperty("webdriver.gecko.driver",
 //					System.getProperty("user.dir") + prop.getProperty("firefoxdriver"));
 			// use webdrivermanager
-			WebDriverManager.firefoxdriver().setup();
+			WebDriverManager.firefoxdriver().clearDriverCache().setup();
 			driver = new FirefoxDriver();
 		} else if (browser.equalsIgnoreCase("Chrome")) {
 //			System.setProperty("webdriver.chrome.driver",
 //					System.getProperty("user.dir") + prop.getProperty("chromedriver"));
 			// use webdrivermanager
-			WebDriverManager.chromedriver().setup();
+//			WebDriverManager.chromedriver().clearDriverCache().setup();
 			driver = new ChromeDriver(options);
 		} else {
 			throw new IllegalArgumentException("Invalid browser value!!");

@@ -1,21 +1,19 @@
 package test_cases;
 
-import java.awt.AWTException;
-
 import com.relevantcodes.extentreports.LogStatus;
 import org.openqa.selenium.By;
 import org.testng.Assert;
-import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
+import pages.HomePage;
 import pages.PageBase;
 
 public class TestCase001_CustomerLogin extends TestBase {
 
-	pages.HomePage homePage;
+	HomePage homePage;
 
 	@Test(priority = 2, groups = "smoke", description = "Customer Login")
-	public void customerLogin() throws InterruptedException, AWTException {
+	public void customerLogin() {
 		homePage = new pages.HomePage(driver);
 		homePage.loginToXYZBank();
 		// take screenshot after successful login

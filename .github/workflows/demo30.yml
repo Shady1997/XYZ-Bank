@@ -1,32 +1,126 @@
-name: Maven Build
+name: Run XYZ Bank Tests
+
 on:
   push:
     branches:
-      - master
-      
-jobs:
-  build:
-    name: "Maven Build"
-    runs-on: ubuntu-latest
-    steps:
-      - name: "Checkout Sources"
-        uses: actions/checkout@v2
-        with:
-          fetch-depth: 2
-      
-      - name: "Set up JDK"
-        uses: actions/setup-java@v2
-        with:
-          distribution: "temurin"
-          java-version: 11
-          cache: "maven"
+      - master   # run on master branch push
+  pull_request:
+    branches:
+      - master   # run on pull requests targeting master branch
 
-      #- uses: browser-actions/setup-chrome@114.0.5735.340
-      - uses: browser-actions/setup-chrome@latest
-      - run: chrome --version
-      
-      - name: "Build with Maven"
-        run: mvn -B clean test
+jobs:
+  selenium-run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30  # Adjust as needed
+
+    steps:
+      # Step 1: Checkout the repository
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0  # Fetch all history to avoid shallow clone issues
+          submodules: true  # If using submodules, fetch them
+
+      # Step 2: Set up JDK
+      - name: Set up JDK
+        uses: actions/setup-java@v3
+        with:
+          java-version: '11'  # Use the appropriate JDK version for your project
+          distribution: 'temurin'
+
+      # Step 3: Set up Maven
+      - name: Set up Maven
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'maven'
+
+      # Step 4: Install Browser Dependencies (optional, adjust based on the browser you want)
+      - name: Install Browser Dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libgtk-3-0 libgbm-dev google-chrome-stable
+
+      # Step 5: Show Current Directory and List Files
+      - name: Show Current Directory and Files
+        run: |
+          pwd     # Show the current working directory
+          ls -la  # List all files to check for missing ones
+
+      # Step 6: Build Maven Project and Run Selenium Tests
+      - name: Build and Test with Maven
+        run: |
+          mvn clean install    # Clean and install the project
+          mvn test             # Run tests
+
+      # Step 7: Upload Test Results (if generated)
+      - name: Upload Test Results
+        uses: actions/upload-artifact@v3
+        with:
+          name: test-results
+          path: index.html  # Change the path if your reports are generated elsewhere
+
+      # Step 8: Commit and push HTML report (if reports are generated in HTML)
+      - name: Commit and push HTML report
+        run: |
+          git config --global user.name "Shady1997"
+          git config --global user.email "shadyahmed9719@gmail.com"
+          git add .
+          git commit -m "Update Selenium test report"
+          git pull origin master
+          git push origin master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            #name: Maven Build
+#on:
+#  push:
+#    branches:
+#      - master
+#
+#jobs:
+#  build:
+#    name: "Maven Build"
+#    runs-on: ubuntu-latest
+#    steps:
+#      - name: "Checkout Sources"
+#        uses: actions/checkout@v2
+#        with:
+#          fetch-depth: 2
+#
+#      - name: "Set up JDK"
+#        uses: actions/setup-java@v2
+#        with:
+#          distribution: "temurin"
+#          java-version: 11
+#          cache: "maven"
+#
+#      #- uses: browser-actions/setup-chrome@114.0.5735.340
+#      - uses: browser-actions/setup-chrome@latest
+#      - run: chrome --version
+#
+#      - name: "Build with Maven"
+#        run: mvn -B clean test
 
 
 

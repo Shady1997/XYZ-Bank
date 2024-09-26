@@ -10,7 +10,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.chromium.HasCdp;
+//import org.openqa.selenium.chromium.HasCdp;
 import org.openqa.selenium.devtools.DevTools;
 import org.openqa.selenium.devtools.HasDevTools;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -97,7 +97,7 @@ public class TestCase005_CheckLocalization {
         coordinates.put("longtitute","3");
         coordinates.put("accuracy","1");
 
-        ((HasCdp) driver).executeCdpCommand("Emulation.setGeolocationOverride", coordinates);
+//        ((HasCdp) driver).executeCdpCommand("Emulation.setGeolocationOverride", coordinates);
 
         driver.get("https://www.facebook.com");
         driver.findElement(By.name("q")).sendKeys("Netflix", Keys.ENTER);
