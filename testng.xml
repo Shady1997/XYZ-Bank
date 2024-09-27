@@ -17,6 +17,15 @@
 			<class name="test_cases.TestCase004_CheckTransactionType" />
 		</classes>
 	</test>
+	<test name="Test Login to XYZ-Bank and Make Full Transaction">
+		<parameter name="browser" value="Firefox" />
+		<classes>
+			<class name="test_cases.TestCase001_CustomerLogin" />
+			<class name="test_cases.TestCase002_MakeDeposite" />
+			<class name="test_cases.TestCase003_MakeWithdraw" />
+			<class name="test_cases.TestCase004_CheckTransactionType" />
+		</classes>
+	</test>
 	<!--<test name="TestFirefox"> <parameter name="browser" value="Firefox" 
 		/> <classes> <class name="main.Start" /> </classes> </test> -->
 </suite>
