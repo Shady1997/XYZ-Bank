@@ -1,10 +1,14 @@
 # Ignore all Maven build outputs
 /target/
+/test-output/
+/temp_report/
 
 # Ignore specific types of result files
 *.jar
 *.json
+*.log
 
 # Ignore Allure and other test result files if not needed in commits
 /allure-results/
 /surefire-reports/
+/src/test/resources/Screenshots/

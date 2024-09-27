@@ -59,22 +59,11 @@ jobs:
           git config --global user.name "Shady1997"
           git config --global user.email "shadyahmed9719@gmail.com"
           
-          # Clean the workspace from unwanted files
-          git reset --hard  # Revert any unnecessary changes
-          git clean -fd     # Clean up untracked files
-          
           # Add only the HTML reports if necessary
           git add index.html
-          
-          # Check if there are any changes to commit
-          if [[ -n $(git status --porcelain) ]]; then
-            git commit -m "Update Selenium test report"
-            git pull --rebase origin master  # Rebase to avoid conflicts
-            git push origin master
-          else
-            echo "No changes to commit"
-          fi
-
+          git commit -m "Update Selenium test report"
+          git pull origin master  
+          git push origin master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -102,83 +91,83 @@ jobs:
 
 
             #name: Maven Build
-#on:
-#  push:
-#    branches:
-#      - master
-#
-#jobs:
-#  build:
-#    name: "Maven Build"
-#    runs-on: ubuntu-latest
-#    steps:
-#      - name: "Checkout Sources"
-#        uses: actions/checkout@v2
-#        with:
-#          fetch-depth: 2
-#
-#      - name: "Set up JDK"
-#        uses: actions/setup-java@v2
-#        with:
-#          distribution: "temurin"
-#          java-version: 11
-#          cache: "maven"
-#
-#      #- uses: browser-actions/setup-chrome@114.0.5735.340
-#      - uses: browser-actions/setup-chrome@latest
-#      - run: chrome --version
-#
-#      - name: "Build with Maven"
-#        run: mvn -B clean test
+            #on:
+            #  push:
+            #    branches:
+            #      - master
+            #
+            #jobs:
+            #  build:
+            #    name: "Maven Build"
+            #    runs-on: ubuntu-latest
+            #    steps:
+            #      - name: "Checkout Sources"
+            #        uses: actions/checkout@v2
+            #        with:
+            #          fetch-depth: 2
+            #
+            #      - name: "Set up JDK"
+            #        uses: actions/setup-java@v2
+            #        with:
+            #          distribution: "temurin"
+            #          java-version: 11
+            #          cache: "maven"
+            #
+            #      #- uses: browser-actions/setup-chrome@114.0.5735.340
+            #      - uses: browser-actions/setup-chrome@latest
+            #      - run: chrome --version
+            #
+            #      - name: "Build with Maven"
+            #        run: mvn -B clean test
 
 
 
 
-      # - uses: actions/upload-artifact@master
-      #   with:
-      #    name: allure-results
-      #    path: allure-results
-      #    retention-days: 20
+            # - uses: actions/upload-artifact@master
+            #   with:
+            #    name: allure-results
+            #    path: allure-results
+            #    retention-days: 20
 
-      # - name: Get Allure history
-      #   uses: actions/checkout@v2
-      #   if: always()
-      #   continue-on-error: true
-      #   with:
-      #    ref: master
-      #    path: master
+            # - name: Get Allure history
+            #   uses: actions/checkout@v2
+            #   if: always()
+            #   continue-on-error: true
+            #   with:
+            #    ref: master
+            #    path: master
 
-      # - name: Test marketplace action
-      #   uses: simple-elf/allure-report-action@master
-      #   if: always()
-      #   id: allure-report
-      #   with:
-      #     allure_results: allure-results
-      #     gh_pages: master
-      #     allure_report: allure-report
-      #     allure_history: allure-history
-      #     keep_reports: 20
+            # - name: Test marketplace action
+            #   uses: simple-elf/allure-report-action@master
+            #   if: always()
+            #   id: allure-report
+            #   with:
+            #     allure_results: allure-results
+            #     gh_pages: master
+            #     allure_report: allure-report
+            #     allure_history: allure-history
+            #     keep_reports: 20
 
-#       - name: Deploy report to Github Pages
-#         if: always()
-#         uses: Shady1997/XYZ-Bank@push
-#         env:
-#          PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-#          PUBLISH_BRANCH: master
-#          PUBLISH_DIR: ./
-
-
+            #       - name: Deploy report to Github Pages
+            #         if: always()
+            #         uses: Shady1997/XYZ-Bank@push
+            #         env:
+            #          PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            #          PUBLISH_BRANCH: master
+            #          PUBLISH_DIR: ./
 
 
-     # - name: Update dependency graph
-      #  uses: Shady1997/XYZ-Bank@push
 
-      #- name: Deploy report page to github page
-       # uses: Shady1997/XYZ-Bank@push
-        #with:
-           #branch: master
-           #folder: ./temp_report
-         #  github_token: ${{secrets.GITHUB_TOKEN}}
+
+            # - name: Update dependency graph
+            #  uses: Shady1997/XYZ-Bank@push
+
+            #- name: Deploy report page to github page
+            # uses: Shady1997/XYZ-Bank@push
+            #with:
+            #branch: master
+          #folder: ./temp_report
+          #  github_token: ${{secrets.GITHUB_TOKEN}}
           # publish_dir: ./temp_report
 
 # This workflow will build a Java project with Maven, and cache/restore any dependencies to improve the workflow execution time

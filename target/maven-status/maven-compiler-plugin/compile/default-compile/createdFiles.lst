@@ -1,5 +1,0 @@
-database/DatabaseConnection.class
-pages/HomePage.class
-pages/UserPage.class
-pages/PageBase.class
-actions/CustomWebElementDecorator.class
