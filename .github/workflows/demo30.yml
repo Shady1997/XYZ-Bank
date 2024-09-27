@@ -59,14 +59,14 @@ jobs:
           git config --global user.name "Shady1997"
           git config --global user.email "shadyahmed9719@gmail.com"
 
-#          # Add only the HTML reports if necessary
+          # Add only the HTML reports if necessary
           git add index.html
           git commit -m "Update Selenium test report"
           
           # Set the default pull behavior to rebase
           git config pull.rebase true
           
-#         # Pull with rebase and set conflict resolution strategy
+          # Pull with rebase and set conflict resolution strategy
           git pull --rebase=merges origin master  
           
           # commit changes of index file
