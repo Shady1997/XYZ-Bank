@@ -70,8 +70,8 @@ jobs:
           git pull --rebase=merges origin master  
           
           # commit changes of index file
-          git add .
-          git commit -m "update index file"
+          # git add .
+          # git commit -m "update index file"
           git push origin master
 
         env:
