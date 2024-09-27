@@ -62,8 +62,14 @@ jobs:
           # Add only the HTML reports if necessary
           git add index.html
           git commit -m "Update Selenium test report"
-          git pull origin master  
+          
+          # Set the default pull behavior to rebase
+          git config pull.rebase true
+          
+          # Pull with rebase and set conflict resolution strategy
+          git pull --rebase=merges origin master  
           git push origin master
+
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
