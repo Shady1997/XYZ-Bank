@@ -8,7 +8,7 @@
 		<listener class-name="testNGListener.Listener" />
 		<listener class-name="reports.MyListener" />
 	</listeners>
-	<test name="Test Login to XYZ-Bank and Make Full Transaction">
+	<test name="Test Login to XYZ-Bank and Make Full Transaction with Chrome">
 		<parameter name="browser" value="Chrome" />
 		<classes>
 			<class name="test_cases.TestCase001_CustomerLogin" />
@@ -17,7 +17,7 @@
 			<class name="test_cases.TestCase004_CheckTransactionType" />
 		</classes>
 	</test>
-	<test name="Test Login to XYZ-Bank and Make Full Transaction">
+	<test name="Test Login to XYZ-Bank and Make Full Transaction with Firefox">
 		<parameter name="browser" value="Firefox" />
 		<classes>
 			<class name="test_cases.TestCase001_CustomerLogin" />
