@@ -64,14 +64,14 @@ jobs:
           git commit -m "Update Selenium test report"
           
           # Set the default pull behavior to rebase
-          git config pull.rebase true
+#          git config pull.rebase true
           
 #         # Pull with rebase and set conflict resolution strategy
-          git pull --rebase=merges origin master  
+#          git pull --rebase=merges origin master  
           
           # commit changes of index file
-          git add .
-          git commit -m "update index file"
+#          git add .
+#          git commit -m "update index file"
           git push origin master
 
         env:
