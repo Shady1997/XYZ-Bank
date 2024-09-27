@@ -18,6 +18,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.testng.annotations.*;
 
 
@@ -64,8 +65,12 @@ public class TestBase {
 //			System.setProperty("webdriver.gecko.driver",
 //					System.getProperty("user.dir") + prop.getProperty("firefoxdriver"));
 			// use webdrivermanager
+			// Set Firefox options to run in headless mode
+			FirefoxOptions options = new FirefoxOptions();
+			options.addArguments("--headless");  // Enable headless mode
+
 			WebDriverManager.firefoxdriver().clearDriverCache().setup();
-			driver = new FirefoxDriver();
+			driver = new FirefoxDriver(options);
 		} else if (browser.equalsIgnoreCase("Chrome")) {
 //			System.setProperty("webdriver.chrome.driver",
 //					System.getProperty("user.dir") + prop.getProperty("chromedriver"));
