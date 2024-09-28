@@ -18,7 +18,7 @@
 		</classes>
 	</test>
 	<test name="Test Login to XYZ-Bank and Make Full Transaction with Firefox">
-		<parameter name="browser" value="Firefox" />
+		<parameter name="browser" value="Chrome" />
 		<classes>
 			<class name="test_cases.TestCase001_CustomerLogin" />
 			<class name="test_cases.TestCase002_MakeDeposite" />
