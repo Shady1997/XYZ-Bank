@@ -25,7 +25,7 @@ jobs:
       - name: Set up JDK and Maven
         uses: actions/setup-java@v3
         with:
-          java-version: '17'  # Use the appropriate JDK version for your project
+          java-version: '22'  # Use the appropriate JDK version for your project
           distribution: 'temurin'
 
       # Step 3: Install Browser Dependencies (optional, adjust based on the browser you want)

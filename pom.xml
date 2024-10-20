@@ -12,8 +12,8 @@
     <url>https://www.globalsqa.com/angularJs-protractor/BankingProject/#/login</url>
 
     <properties>
-        <maven.compiler.source>17</maven.compiler.source>
-        <maven.compiler.target>17</maven.compiler.target>
+        <maven.compiler.source>22</maven.compiler.source>
+        <maven.compiler.target>22</maven.compiler.target>
         <maven.surefire.plugin.version>3.0.0-M5</maven.surefire.plugin.version>
         <allure.maven.version>2.11.0</allure.maven.version>
         <aspectj.version>1.9.4</aspectj.version>
@@ -22,11 +22,21 @@
             https://repo.maven.apache.org/maven2/io/qameta/allure/allure-commandline
         </allure.cmd.download.url>
         <maven.compiler.plugin.version>3.7.0</maven.compiler.plugin.version>
+        <java.version>22</java.version>
     </properties>
 
     <build>
         <pluginManagement>
             <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.5.1</version>
+                    <configuration>
+                        <source>1.8</source>
+                        <target>1.8</target>
+                    </configuration>
+                </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-resources-plugin</artifactId>
@@ -149,6 +159,11 @@
             <version>4.16.1</version>
         </dependency>
         <dependency>
+            <groupId>com.aventstack</groupId>
+            <artifactId>extentreports</artifactId>
+            <version>5.0.9</version>
+        </dependency>
+        <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-remote-driver</artifactId>
             <version>4.13.0</version>
@@ -248,6 +263,11 @@
             <groupId>com.microsoft.playwright</groupId>
             <artifactId>playwright</artifactId>
             <version>1.33.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.28</version>
         </dependency>
     </dependencies>
 </project>

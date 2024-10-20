@@ -77,7 +77,7 @@ public class TestCase005_CheckLocalization {
         // Set Driver wait
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         // define extend report
-        report = new ExtentReports(System.getProperty("user.dir") + "/index.html");
+        report = new ExtentReports(System.getProperty("user.dir") + "/index1.html");
         test = report.startTest("XYZ Project");
     }
 
